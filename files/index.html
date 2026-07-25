@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAG SAT | Elite Private SAT Tutoring & Score Maximization</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display for the 'brag' serif aesthetic, Inter for ultra-clean tech reading text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .serif-font { font-family: 'Playfair Display', serif; }
+        .heading-font { font-family: 'Sora', sans-serif; letter-spacing: -0.01em; }
+        .smooth-scroll { scroll-behavior: smooth; }
+        
+        /* Premium Brand Colors from ChatGPT Image Jun 28, 2026, 07_48_24 AM.png */
+        .text-gold { color: #c5a043; }
+        .brand-brag { color: #0a0a0a; }
+        .brand-sat { color: #c5a043; }
+        .brand-brag-light { color: #f5f5f5; }
+        .hero-wordmark {
+            font-family: 'Sora', sans-serif; font-weight: 800; letter-spacing: -0.03em;
+            line-height: 0.9; font-size: clamp(3.5rem, 7vw, 6rem);
+            -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision;
+        }
+        .bg-gold { background-color: #c5a043; }
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #ebd087 0%, #c5a043 50%, #9a7929 100%);
+        }
+        .border-gold { border-color: #c5a043; }
+    </style>
+</head>
+<body class="text-slate-800 bg-white smooth-scroll tracking-normal leading-relaxed overflow-x-hidden">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-neutral-100 w-full">
+        <div class="max-w-none w-full px-4 sm:px-8 lg:px-10 py-2.5 flex items-center justify-between gap-4">
+            
+            <!-- Official BragSAT Logo -->
+            <a href="#top" class="flex items-center shrink-0 group">
+                <img src="data:image/png;base64,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" alt="BragSAT Logo" class="h-[75px] sm:h-[85px] w-auto object-contain">
+            </a>
+
+            <!-- Right-aligned Nav Group: Links + CTA together -->
+            <div class="hidden lg:flex items-center gap-8 xl:gap-10 ml-auto">
+                <nav class="flex flex-nowrap items-center gap-8 xl:gap-10 font-bold text-neutral-600 text-xl uppercase tracking-wide">
+                    <a href="#top" class="whitespace-nowrap hover:text-gold transition-colors">Home</a>
+                    <a href="about.html" class="whitespace-nowrap hover:text-gold transition-colors">About</a>
+                </nav>
+
+                <!-- Dynamic CTA Link Node -->
+                <div class="flex items-center shrink-0">
+                    <a href="#consultation-form" class="bg-neutral-950 text-white border border-neutral-900 font-bold px-5 py-3 rounded-xl hover:bg-neutral-900 shadow-md transition-all hover:-translate-y-0.5 text-[11px] xl:text-xs tracking-wider uppercase whitespace-nowrap">
+                        Book Free Call
+                    </a>
+                </div>
+            </div>
+
+            <!-- CTA for smaller screens where the grouped nav is hidden -->
+            <div class="hidden sm:flex lg:hidden items-center shrink-0 ml-auto">
+                <a href="#consultation-form" class="bg-neutral-950 text-white border border-neutral-900 font-bold px-5 py-3 rounded-xl hover:bg-neutral-900 shadow-md transition-all hover:-translate-y-0.5 text-[11px] xl:text-xs tracking-wider uppercase whitespace-nowrap">
+                    Book Free Call
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="lg:hidden text-neutral-900 p-2.5 rounded-xl hover:bg-neutral-50 focus:outline-none shrink-0">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Links -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-neutral-100 px-6 py-6 space-y-4 shadow-inner">
+            <a href="#top" class="block font-bold text-2xl text-neutral-700 hover:text-gold py-1">Home</a>
+            <a href="about.html" class="block font-bold text-2xl text-neutral-700 hover:text-gold py-1">About</a>
+            <a href="#consultation-form" class="w-full text-center flex items-center justify-center bg-neutral-950 text-white font-black py-4 rounded-xl text-sm tracking-wider uppercase pt-3">
+                Book Free Consultation
+            </a>
+        </div>
+    </header>
+
+    <!-- Sub-header Heading: Premium 1-on-1 Tutoring for the SAT -->
+    <div class="w-full bg-neutral-950 border-b border-neutral-900">
+        <div class="max-w-none w-full px-4 sm:px-8 lg:px-12 py-3.5 flex items-center justify-center gap-2.5 text-center">
+            <i class="fa-solid fa-gem text-amber-400 text-sm"></i>
+            <h2 class="text-white font-extrabold text-xs sm:text-sm uppercase tracking-[0.2em]">Premium 1-on-1 Tutoring for the SAT</h2>
+        </div>
+    </div>
+
+    <!-- Hero Banner Layout (Stretched Out Gold & Dark Framework Viewport) -->
+    <section id="top" class="relative bg-white overflow-hidden py-16 lg:py-28 min-h-[85vh] flex items-center w-full border-b border-neutral-100">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(197,160,67,0.14),transparent_60%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(197,160,67,0.08),transparent_55%)]"></div>
+        <div class="absolute inset-0 opacity-[0.035]" style="background-image:radial-gradient(#0a0a0a 1px, transparent 1px); background-size:26px 26px;"></div>
+
+        <div class="max-w-none w-full px-4 sm:px-8 lg:px-12 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Narrative -->
+            <div class="lg:col-span-7 text-center lg:text-left space-y-8">
+                <h1 class="heading-font text-5xl sm:text-7xl lg:text-8xl font-semibold text-neutral-950 tracking-tight leading-[0.95]">
+                    The SAT Score <br>
+                    you can <span class="serif-font italic text-gold">brag</span> about!
+                </h1>
+
+                <div class="pt-4 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#why-us" class="bg-gold-gradient text-neutral-950 font-black px-10 py-4.5 rounded-xl transition-all shadow-lg shadow-amber-500/10 text-center tracking-wider text-sm uppercase border border-amber-400/20">
+                        Why Parents Trust Us
+                    </a>
+                    <a href="#pedagogy" class="bg-gold-gradient text-neutral-950 font-black px-10 py-4.5 rounded-xl transition-all shadow-lg shadow-amber-500/10 text-center tracking-wider text-sm uppercase border border-amber-400/20">
+                        See Our Method
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Graphic Section: Large Brand Emblem, floated elegantly (no box) -->
+            <div class="lg:col-span-5 relative hidden lg:flex items-center justify-center w-full">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] h-[30rem] bg-amber-200/25 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-16 -left-10 w-64 h-64 bg-amber-100/40 rounded-full blur-3xl"></div>
+
+                <div class="relative w-full max-w-lg mx-auto flex items-center justify-center">
+                    <img src="bragsat-emblem.png" alt="BragSAT Emblem" class="relative w-full h-auto max-w-[30rem] drop-shadow-[0_25px_45px_rgba(10,10,10,0.16)]">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- NEW SECTION: Why Parents Choose BragSAT Panel -->
+    <section id="why-us" class="max-w-none w-full px-4 sm:px-8 lg:px-12 py-24 bg-white border-b border-neutral-100">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+            <span class="text-gold font-bold uppercase tracking-widest text-xs tracking-[0.2em]">Parent Confidence</span>
+            <h2 class="heading-font text-4xl sm:text-6xl font-semibold tracking-tight mt-3 text-neutral-950">Why Parents Choose <span class="brand-brag">Brag</span><span class="brand-sat">SAT</span>?</h2>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid sm:grid-cols-2 gap-x-10 gap-y-10">
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 p-6 rounded-[1.75rem] border border-neutral-100 shadow-sm hover:shadow-md transition-shadow">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400" alt="Tutor giving one-on-one personalised attention to a student" class="w-40 h-40 rounded-full object-cover shrink-0 shadow-md">
+                <div>
+                    <h3 class="heading-font text-xl sm:text-2xl font-bold text-neutral-950 leading-snug mb-1.5">Highly Personalised Attention</h3>
+                    <p class="text-neutral-600 text-base font-light leading-relaxed">1-on-1 focus tailored to your child's unique strengths and needs</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 p-6 rounded-[1.75rem] border border-neutral-100 shadow-sm hover:shadow-md transition-shadow">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400" alt="Diagnostic performance analytics on a laptop screen" class="w-40 h-40 rounded-full object-cover shrink-0 shadow-md">
+                <div>
+                    <h3 class="heading-font text-xl sm:text-2xl font-bold text-neutral-950 leading-snug mb-1.5">Powerful, Granular Diagnostics</h3>
+                    <p class="text-neutral-600 text-base font-light leading-relaxed">Deep, skill-level insights that pinpoint gaps and drive measurable improvement</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 p-6 rounded-[1.75rem] border border-neutral-100 shadow-sm hover:shadow-md transition-shadow">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=400" alt="Student mapping out a personalised study road map" class="w-40 h-40 rounded-full object-cover shrink-0 shadow-md">
+                <div>
+                    <h3 class="heading-font text-xl sm:text-2xl font-bold text-neutral-950 leading-snug mb-1.5">Customised Study Plans</h3>
+                    <p class="text-neutral-600 text-base font-light leading-relaxed">Personalised road maps designed to achieve your child's target score</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 p-6 rounded-[1.75rem] border border-neutral-100 shadow-sm hover:shadow-md transition-shadow">
+                <img src="https://images.unsplash.com/photo-1580894732930-0babd100d356?auto=format&fit=crop&q=80&w=400" alt="Experienced Subject Matter Expert teaching a concept" class="w-40 h-40 rounded-full object-cover shrink-0 shadow-md">
+                <div>
+                    <h3 class="heading-font text-xl sm:text-2xl font-bold text-neutral-950 leading-snug mb-1.5">Tutoring by True SMEs</h3>
+                    <p class="text-neutral-600 text-base font-light leading-relaxed">Learn from experienced Subject Matter Experts with deep expertise and proven results</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 p-6 rounded-[1.75rem] border border-neutral-100 shadow-sm hover:shadow-md transition-shadow">
+                <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=400" alt="Calendar and planner representing flexible scheduling" class="w-40 h-40 rounded-full object-cover shrink-0 shadow-md">
+                <div>
+                    <h3 class="heading-font text-xl sm:text-2xl font-bold text-neutral-950 leading-snug mb-1.5">Flexible Scheduling</h3>
+                    <p class="text-neutral-600 text-base font-light leading-relaxed">Classes planned around your child's availability, not the other way around</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 p-6 rounded-[1.75rem] border border-neutral-100 shadow-sm hover:shadow-md transition-shadow">
+                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=400" alt="Research-driven course materials and books" class="w-40 h-40 rounded-full object-cover shrink-0 shadow-md">
+                <div>
+                    <h3 class="heading-font text-xl sm:text-2xl font-bold text-neutral-950 leading-snug mb-1.5">100% Original, Research-Driven Course Content</h3>
+                    <p class="text-neutral-600 text-base font-light leading-relaxed">Designed by educators who have built some of India's most successful test-preparation programs.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEW SECTION: The BragSAT Pedagogy (Home - Section 4) -->
+    <section id="pedagogy" class="relative max-w-none w-full px-4 sm:px-8 lg:px-12 py-24 bg-gradient-to-b from-amber-50/80 via-stone-50 to-amber-50/50 border-b border-neutral-100 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full blur-3xl pointer-events-none" style="background: radial-gradient(circle, rgba(197,160,67,0.18) 0%, transparent 70%);"></div>
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative text-center max-w-4xl mx-auto mb-16">
+            <span class="serif-font italic text-gold font-semibold uppercase tracking-widest text-sm tracking-[0.2em]">Our Learning System</span>
+            <h2 class="heading-font text-4xl sm:text-6xl font-semibold tracking-tight mt-3 text-neutral-950">The <span class="brand-brag">Brag</span><span class="brand-sat">SAT</span> Pedagogy</h2>
+            <p class="text-neutral-600 text-base sm:text-lg font-light max-w-3xl mx-auto mt-5 leading-relaxed">A structured, three-stage system that carries every student from first principles to full test-day readiness.</p>
+        </div>
+
+        <!-- Stage 1: Foundation Timeline -->
+        <div class="relative max-w-6xl mx-auto mb-16">
+            <div class="text-center mb-20 sm:mb-24">
+                <span class="block serif-font italic font-bold text-gold leading-none uppercase tracking-[0.15em] mb-6 sm:mb-8"><span class="text-[2.25rem] sm:text-[2.5rem]">Stage </span><span class="text-[4.5rem] sm:text-[5rem]">1</span></span>
+                <h3 class="heading-font text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-950">Foundation</h3>
+            </div>
+
+            <!-- Radial wheel layout (desktop / tablet) -->
+            <div class="hidden md:block relative mx-auto" style="width:100%; max-width: 1100px; aspect-ratio: 1/1;">
+                <div class="absolute inset-[8%] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(197,160,67,0.22) 0%, transparent 65%); filter: blur(30px);"></div>
+                <svg viewBox="0 0 1100 1100" class="absolute inset-0 w-full h-full drop-shadow-xl">
+                    <path d="M 486.52,462.63 L 435.38,392.24 A 195,195 0 0 1 664.62,392.24 L 613.48,462.63 A 108,108 0 0 0 486.52,462.63 Z" fill="#0a0a0a" stroke="white" stroke-width="4"></path>
+                    <path d="M 613.48,462.63 L 664.62,392.24 A 195,195 0 0 1 735.46,610.26 L 652.71,583.37 A 108,108 0 0 0 613.48,462.63 Z" fill="#3d3428" stroke="white" stroke-width="4"></path>
+                    <path d="M 652.71,583.37 L 735.46,610.26 A 195,195 0 0 1 550.00,745.00 L 550.00,658.00 A 108,108 0 0 0 652.71,583.37 Z" fill="#6b5a3a" stroke="white" stroke-width="4"></path>
+                    <path d="M 550.00,658.00 L 550.00,745.00 A 195,195 0 0 1 364.54,610.26 L 447.29,583.37 A 108,108 0 0 0 550.00,658.00 Z" fill="#9a814c" stroke="white" stroke-width="4"></path>
+                    <path d="M 447.29,583.37 L 364.54,610.26 A 195,195 0 0 1 435.38,392.24 L 486.52,462.63 A 108,108 0 0 0 447.29,583.37 Z" fill="#c5a043" stroke="white" stroke-width="4"></path>
+                    <circle cx="550" cy="550" r="108" fill="white" stroke="#e5e5e5" stroke-width="2"></circle>
+                </svg>
+
+                <!-- Center label -->
+                <div class="absolute flex flex-col items-center justify-center text-center" style="left:50%; top:50%; transform: translate(-50%, -50%); width: 170px;">
+                    <i class="fa-solid fa-graduation-cap text-gold text-2xl mb-1"></i>
+                    <p class="heading-font text-lg font-bold text-neutral-950 leading-tight">STAGE 1</p>
+                    <p class="serif-font italic text-[13px] text-neutral-500 font-medium">Foundation</p>
+                </div>
+
+                <!-- Step number badges on the ring -->
+                <div class="absolute flex items-center justify-center text-white heading-font font-bold text-xl" style="left:50.00%; top:36.23%; transform: translate(-50%, -50%);">01</div>
+                <div class="absolute flex items-center justify-center text-white heading-font font-bold text-xl" style="left:63.10%; top:45.74%; transform: translate(-50%, -50%);">02</div>
+                <div class="absolute flex items-center justify-center text-white heading-font font-bold text-xl" style="left:58.10%; top:61.14%; transform: translate(-50%, -50%);">03</div>
+                <div class="absolute flex items-center justify-center text-white heading-font font-bold text-xl" style="left:41.90%; top:61.14%; transform: translate(-50%, -50%);">04</div>
+                <div class="absolute flex items-center justify-center text-white heading-font font-bold text-xl" style="left:36.90%; top:45.74%; transform: translate(-50%, -50%);">05</div>
+
+                <!-- Step text cards -->
+                <div class="absolute flex flex-col items-center text-center w-[220px] sm:w-[250px]" style="left:50.00%; top:25.44%; transform: translate(-50%, -100%);">
+                    <div class="flex items-center gap-2.5 mb-1.5 justify-center">
+                        <div class="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm shrink-0" style="background:#0a0a0a"><i class="fa-solid fa-book"></i></div>
+                        <h4 class="heading-font font-bold text-neutral-950 text-xl sm:text-2xl leading-snug">Step 1: Pre-Class Assignment*</h4>
+                    </div>
+                    <p class="text-neutral-600 text-base font-light leading-relaxed mt-1">Curated pre-class assignments build strong reading habits, encourage independent learning, and maximize the effectiveness of every live mentoring session.</p>
+                        <p class="text-sm text-neutral-400 font-medium leading-relaxed pt-1.5 mt-1.5 border-t border-neutral-100 max-w-[240px]">*Assigned only for theory-heavy topics where foundational concepts can be learned independently before class.</p>
+                </div>
+
+                <div class="absolute flex flex-col items-start text-left w-[220px] sm:w-[250px]" style="left:76.63%; top:41.35%; transform: translate(0%, -50%);">
+                    <div class="flex items-center gap-2.5 mb-1.5 justify-start">
+                        <div class="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm shrink-0" style="background:#3d3428"><i class="fa-solid fa-clipboard-question"></i></div>
+                        <h4 class="heading-font font-bold text-neutral-950 text-xl sm:text-2xl leading-snug">Step 2: Pre-Class<br>Assessment</h4>
+                    </div>
+                    <p class="text-neutral-600 text-base font-light leading-relaxed mt-1">Every topic begins with a quick diagnostic to ensure every lesson is personalized to your needs.</p>
+                        <p class="text-sm text-neutral-400 font-medium leading-relaxed pt-1.5 mt-1.5 border-t border-neutral-100 max-w-[240px]">*Students may attempt the assessment up to 3 times to reinforce learning and achieve mastery.</p>
+                </div>
+
+                <div class="absolute flex flex-col items-start text-left w-[220px] sm:w-[250px]" style="left:66.46%; top:72.65%; transform: translate(0%, -50%);">
+                    <div class="flex items-center gap-2.5 mb-1.5 justify-start">
+                        <div class="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm shrink-0" style="background:#6b5a3a"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <h4 class="heading-font font-bold text-neutral-950 text-xl sm:text-2xl leading-snug">Step 3: Live Online Class</h4>
+                    </div>
+                    <p class="text-neutral-600 text-base font-light leading-relaxed mt-1">Expert mentors simplify challenging concepts, identify and correct faltering points in real time, and build the speed needed to excel on the test.</p>
+                </div>
+
+                <div class="absolute flex flex-col items-end text-right w-[220px] sm:w-[250px]" style="left:33.54%; top:72.65%; transform: translate(-100%, -50%);">
+                    <div class="flex items-center gap-2.5 mb-1.5 justify-end">
+                        <div class="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm shrink-0" style="background:#9a814c"><i class="fa-solid fa-layer-group"></i></div>
+                        <h4 class="heading-font font-bold text-neutral-950 text-xl sm:text-2xl leading-snug">Step 4: In-Class Guided Mastery</h4>
+                    </div>
+                    <p class="text-neutral-600 text-base font-light leading-relaxed mt-1">Students tackle progressively harder questions, advancing only after consistent performance at each level, with continuous feedback and faltering-point analysis.</p>
+                </div>
+
+                <div class="absolute flex flex-col items-end text-right w-[220px] sm:w-[250px]" style="left:23.37%; top:41.35%; transform: translate(-100%, -50%);">
+                    <div class="flex items-center gap-2.5 mb-1.5 justify-end">
+                        <div class="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm shrink-0" style="background:#c5a043"><i class="fa-solid fa-square-poll-vertical"></i></div>
+                        <h4 class="heading-font font-bold text-neutral-950 text-xl sm:text-2xl leading-snug">Step 5: Post-Class<br>Assessment</h4>
+                    </div>
+                    <p class="text-neutral-600 text-base font-light leading-relaxed mt-1">A structured assessment measures your improvement by evaluating how effectively you apply the concepts and techniques learned during the class.</p>
+                        <p class="text-sm text-neutral-400 font-medium leading-relaxed pt-1.5 mt-1.5 border-t border-neutral-100 max-w-[240px]">*Students may attempt the assessment up to 3 times to reinforce learning and achieve mastery.</p>
+                </div>
+            </div>
+
+            <!-- Fallback stacked list (mobile) -->
+            <div class="md:hidden grid gap-6">
+                <div class="bg-white border border-neutral-200/70 rounded-2xl p-6 shadow-sm flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white text-sm shrink-0" style="background:#0a0a0a"><i class="fa-solid fa-book"></i></div>
+                        <h4 class="heading-font font-bold text-neutral-950 text-2xl leading-snug">Step 1: Pre-Class Assignment*</h4>
+                    </div>
+                    <p class="text-neutral-600 text-xl font-light leading-relaxed">Curated pre-class assignments build strong reading habits, encourage independent learning, and maximize the effectiveness of every live mentoring session.</p>
+                    <p class="text-base text-neutral-400 font-medium leading-relaxed pt-1 border-t border-neutral-100">*Assigned only for theory-heavy topics where foundational concepts can be learned independently before class.</p>
+                </div>
+                <div class="bg-white border border-neutral-200/70 rounded-2xl p-6 shadow-sm flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white text-sm shrink-0" style="background:#3d3428"><i class="fa-solid fa-clipboard-question"></i></div>
+                        <h4 class="heading-font font-bold text-neutral-950 text-2xl leading-snug">Step 2: Pre-Class<br>Assessment</h4>
+                    </div>
+                    <p class="text-neutral-600 text-xl font-light leading-relaxed">Every topic begins with a quick diagnostic to ensure every lesson is personalized to your needs.</p>
+                    <p class="text-base text-neutral-400 font-medium leading-relaxed pt-1 border-t border-neutral-100">*Students may attempt the assessment up to 3 times to reinforce learning and achieve mastery.</p>
+                </div>
+                <div class="bg-white border border-neutral-200/70 rounded-2xl p-6 shadow-sm flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white text-sm shrink-0" style="background:#6b5a3a"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <h4 class="heading-font font-bold text-neutral-950 text-2xl leading-snug">Step 3: Live Online Class</h4>
+                    </div>
+                    <p class="text-neutral-600 text-xl font-light leading-relaxed">Expert mentors simplify challenging concepts, identify and correct faltering points in real time, and build the speed needed to excel on the test.</p>
+                </div>
+                <div class="bg-white border border-neutral-200/70 rounded-2xl p-6 shadow-sm flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white text-sm shrink-0" style="background:#9a814c"><i class="fa-solid fa-layer-group"></i></div>
+                        <h4 class="heading-font font-bold text-neutral-950 text-2xl leading-snug">Step 4: In-Class Guided Mastery</h4>
+                    </div>
+                    <p class="text-neutral-600 text-xl font-light leading-relaxed">Students tackle progressively harder questions, advancing only after consistent performance at each level, with continuous feedback and faltering-point analysis.</p>
+                </div>
+                <div class="bg-white border border-neutral-200/70 rounded-2xl p-6 shadow-sm flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white text-sm shrink-0" style="background:#c5a043"><i class="fa-solid fa-square-poll-vertical"></i></div>
+                        <h4 class="heading-font font-bold text-neutral-950 text-2xl leading-snug">Step 5: Post-Class<br>Assessment</h4>
+                    </div>
+                    <p class="text-neutral-600 text-xl font-light leading-relaxed">A structured assessment measures your improvement by evaluating how effectively you apply the concepts and techniques learned during the class.</p>
+                    <p class="text-base text-neutral-400 font-medium leading-relaxed pt-1 border-t border-neutral-100">*Students may attempt the assessment up to 3 times to reinforce learning and achieve mastery.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage 2 & Stage 3 -->
+        <div class="relative max-w-6xl mx-auto space-y-16">
+            <div>
+                <div class="text-center mb-6">
+                    <span class="block serif-font italic font-bold text-gold leading-none uppercase tracking-[0.15em] mb-6 sm:mb-8"><span class="text-[2.25rem] sm:text-[2.5rem]">Stage </span><span class="text-[4.5rem] sm:text-[5rem]">2</span></span>
+                    <h3 class="heading-font text-2xl sm:text-3xl font-bold text-neutral-950">Speed Development</h3>
+                </div>
+                <div class="bg-gradient-to-br from-white via-white to-amber-50/60 border border-amber-100 rounded-[2rem] p-6 sm:p-10 shadow-xl shadow-amber-900/5">
+
+                    <!-- Two knob dials: English/Math and Training Pace/Exam Pace -->
+                    <div class="grid sm:grid-cols-2 gap-14 sm:gap-16 mb-14">
+                        <div class="text-center">
+                            <div class="flex items-start justify-center gap-3 sm:gap-6">
+                                <span class="pt-6 sm:pt-8 text-gold font-bold uppercase tracking-wide text-xl sm:text-2xl text-right w-24 sm:w-28">English</span>
+                                <div class="relative w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] shrink-0">
+                                    <div class="absolute w-3 h-3 rounded-full" style="left:6.0%; top:50.0%; transform: translate(-50%,-50%); background:#c5a043;"></div>
+                                    <div class="absolute w-3 h-3 rounded-full" style="left:94.0%; top:50.0%; transform: translate(-50%,-50%); background:#c5a043;"></div>
+                                    <div class="absolute inset-0 rounded-full" style="background:#0a0a0a; box-shadow: 0 10px 24px rgba(0,0,0,0.35);">
+                                        <div class="absolute inset-0" style="transform: rotate(-45deg); transform-origin: 50% 50%;">
+                                            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full" style="width:6px; height:62%; background:#f4efe4;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="pt-6 sm:pt-8 text-gold font-bold uppercase tracking-wide text-xl sm:text-2xl text-left w-24 sm:w-28">Math</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="flex items-start justify-center gap-3 sm:gap-6">
+                                <span class="pt-6 sm:pt-8 text-gold font-bold uppercase tracking-wide text-xl sm:text-2xl text-right w-28 sm:w-32">Training Pace</span>
+                                <div class="relative w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] shrink-0">
+                                    <div class="absolute w-3 h-3 rounded-full" style="left:6.0%; top:50.0%; transform: translate(-50%,-50%); background:#c5a043;"></div>
+                                    <div class="absolute w-3 h-3 rounded-full" style="left:94.0%; top:50.0%; transform: translate(-50%,-50%); background:#c5a043;"></div>
+                                    <div class="absolute inset-0 rounded-full" style="background:#0a0a0a; box-shadow: 0 10px 24px rgba(0,0,0,0.35);">
+                                        <div class="absolute inset-0" style="transform: rotate(45deg); transform-origin: 50% 50%;">
+                                            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full" style="width:6px; height:62%; background:#f4efe4;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="pt-6 sm:pt-8 text-gold font-bold uppercase tracking-wide text-xl sm:text-2xl text-left w-28 sm:w-32">Exam Pace</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Easy -> Medium -> Hard progression, styled as computer screens -->
+                    <div class="flex items-center justify-center gap-2 sm:gap-4 pt-8 border-t border-neutral-100 flex-wrap">
+                        <div class="flex flex-col items-center gap-3 w-40 sm:w-48 shrink-0">
+                            <p class="heading-font font-bold text-neutral-950 text-xl sm:text-2xl uppercase tracking-wide">Easy</p>
+                            <div class="w-full rounded-t-xl overflow-hidden shadow-lg border border-neutral-300">
+                                <div class="flex items-center gap-1.5 px-3 py-1.5" style="background:#2b2b2b">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                                </div>
+                                <div class="bg-white p-4 flex gap-3">
+                                    <div class="flex flex-col justify-center gap-1.5 flex-1">
+                                        <span class="text-lg font-bold text-neutral-400 mb-1">Q.</span>
+                                        <span class="h-1.5 w-full rounded-full bg-neutral-200"></span>
+                                        <span class="h-1.5 w-[85%] rounded-full bg-neutral-200"></span>
+                                        <span class="h-1.5 w-full rounded-full bg-neutral-200"></span>
+                                        <span class="h-1.5 w-[70%] rounded-full bg-neutral-200"></span>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5 shrink-0">
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>A</span>
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>B</span>
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>C</span>
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>D</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-10 h-3 bg-neutral-300 rounded-b"></div>
+                            <div class="w-20 h-1.5 bg-neutral-400 rounded-full"></div>
+                        </div>
+
+                        <div class="flex flex-col items-center justify-center gap-1 px-0.5 sm:px-2 shrink-0">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950 text-gold flex items-center justify-center text-lg sm:text-xl shadow-md"><i class="fa-solid fa-lock-open"></i></div>
+                            <i class="fa-solid fa-angles-right text-neutral-300 text-2xl sm:text-3xl"></i>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3 w-40 sm:w-48 shrink-0">
+                            <p class="heading-font font-bold text-neutral-950 text-xl sm:text-2xl uppercase tracking-wide">Medium</p>
+                            <div class="w-full rounded-t-xl overflow-hidden shadow-lg border border-neutral-300">
+                                <div class="flex items-center gap-1.5 px-3 py-1.5" style="background:#2b2b2b">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                                </div>
+                                <div class="bg-white p-4 flex gap-3">
+                                    <div class="flex flex-col justify-center gap-1.5 flex-1">
+                                        <span class="text-lg font-bold text-neutral-400 mb-1">Q.</span>
+                                        <span class="h-1.5 w-full rounded-full bg-neutral-200"></span>
+                                        <span class="h-1.5 w-[85%] rounded-full bg-neutral-200"></span>
+                                        <span class="h-1.5 w-full rounded-full bg-neutral-200"></span>
+                                        <span class="h-1.5 w-[70%] rounded-full bg-neutral-200"></span>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5 shrink-0">
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>A</span>
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>B</span>
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>C</span>
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>D</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-10 h-3 bg-neutral-300 rounded-b"></div>
+                            <div class="w-20 h-1.5 bg-neutral-400 rounded-full"></div>
+                        </div>
+
+                        <div class="flex flex-col items-center justify-center gap-1 px-0.5 sm:px-2 shrink-0">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950 text-gold flex items-center justify-center text-lg sm:text-xl shadow-md"><i class="fa-solid fa-lock-open"></i></div>
+                            <i class="fa-solid fa-angles-right text-neutral-300 text-2xl sm:text-3xl"></i>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3 w-40 sm:w-48 shrink-0">
+                            <p class="heading-font font-bold text-neutral-950 text-xl sm:text-2xl uppercase tracking-wide">Hard</p>
+                            <div class="w-full rounded-t-xl overflow-hidden shadow-lg border border-neutral-300">
+                                <div class="flex items-center gap-1.5 px-3 py-1.5" style="background:#2b2b2b">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                                </div>
+                                <div class="bg-white p-4 flex gap-3">
+                                    <div class="flex flex-col justify-center gap-1.5 flex-1">
+                                        <span class="text-lg font-bold text-neutral-400 mb-1">Q.</span>
+                                        <span class="h-1.5 w-full rounded-full bg-neutral-200"></span>
+                                        <span class="h-1.5 w-[85%] rounded-full bg-neutral-200"></span>
+                                        <span class="h-1.5 w-full rounded-full bg-neutral-200"></span>
+                                        <span class="h-1.5 w-[70%] rounded-full bg-neutral-200"></span>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5 shrink-0">
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>A</span>
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>B</span>
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>C</span>
+                                        <span class="w-16 h-6 rounded border border-neutral-200 text-sm font-bold text-neutral-400 flex items-center gap-1.5 px-2"><i class="w-3.5 h-3.5 rounded-full border border-neutral-300 inline-block"></i>D</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-10 h-3 bg-neutral-300 rounded-b"></div>
+                            <div class="w-20 h-1.5 bg-neutral-400 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Descriptions, now below the computer screens -->
+                    <div class="grid sm:grid-cols-2 gap-8 pt-10 mt-2 border-t border-neutral-100">
+                        <div class="bg-neutral-50 border border-neutral-200/60 rounded-xl p-5 text-left">
+                            <p class="text-lg sm:text-xl text-neutral-600 font-light leading-relaxed">Students advance from Easy to Medium to Hard Modules one subject at a time (English/Math), demonstrating consistently high accuracy at each level of difficulty before progressing to the next.</p>
+                        </div>
+                        <div class="bg-neutral-50 border border-neutral-200/60 rounded-xl p-5 text-left">
+                            <p class="text-lg sm:text-xl text-neutral-600 font-light leading-relaxed">At every level of difficulty, students first build confidence at Training Pace before progressing to Exam Pace, building speed gradually rather than abruptly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="text-center mb-6">
+                    <span class="block serif-font italic font-bold text-gold leading-none uppercase tracking-[0.15em] mb-6 sm:mb-8"><span class="text-[2.25rem] sm:text-[2.5rem]">Stage </span><span class="text-[4.5rem] sm:text-[5rem]">3</span></span>
+                    <h3 class="heading-font text-2xl sm:text-3xl font-bold text-neutral-950">Performance Readiness</h3>
+                </div>
+                <div class="bg-gradient-to-br from-white via-white to-amber-50/60 border border-amber-100 rounded-[2rem] p-6 sm:p-10 shadow-xl shadow-amber-900/5">
+
+                    <!-- Practice Test 1 -> 2 -> 3 progression, styled as computer screens -->
+                    <div class="flex items-center justify-center gap-2 sm:gap-4 mb-10 flex-wrap">
+                        <div class="flex flex-col items-center gap-3 w-44 sm:w-52 shrink-0 relative">
+                            <div class="w-full rounded-t-xl overflow-hidden shadow-lg border border-neutral-300">
+                                <div class="flex items-center gap-1.5 px-3 py-1.5" style="background:#2b2b2b">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                                </div>
+                                <div class="bg-white p-5 flex flex-col items-center gap-3">
+                                    <div class="w-12 h-12 rounded-lg bg-neutral-950 text-gold flex items-center justify-center text-xl"><i class="fa-solid fa-file-lines"></i></div>
+                                    <p class="heading-font font-bold text-neutral-950 text-lg sm:text-xl leading-tight text-center">SAT Practice<br>Test 1</p>
+                                </div>
+                            </div>
+                            <div class="w-10 h-3 bg-neutral-300 rounded-b"></div>
+                            <div class="w-20 h-1.5 bg-neutral-400 rounded-full"></div>
+                            <i class="fa-solid fa-circle-check text-gold text-2xl absolute -top-3 -right-3 bg-white rounded-full"></i>
+                        </div>
+
+                        <i class="fa-solid fa-angles-right text-neutral-300 text-2xl sm:text-4xl shrink-0"></i>
+
+                        <div class="flex flex-col items-center gap-3 w-44 sm:w-52 shrink-0 relative">
+                            <div class="w-full rounded-t-xl overflow-hidden shadow-lg border border-neutral-300">
+                                <div class="flex items-center gap-1.5 px-3 py-1.5" style="background:#2b2b2b">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                                </div>
+                                <div class="bg-white p-5 flex flex-col items-center gap-3">
+                                    <div class="w-12 h-12 rounded-lg bg-neutral-950 text-gold flex items-center justify-center text-xl"><i class="fa-solid fa-file-lines"></i></div>
+                                    <p class="heading-font font-bold text-neutral-950 text-lg sm:text-xl leading-tight text-center">SAT Practice<br>Test 2</p>
+                                </div>
+                            </div>
+                            <div class="w-10 h-3 bg-neutral-300 rounded-b"></div>
+                            <div class="w-20 h-1.5 bg-neutral-400 rounded-full"></div>
+                            <i class="fa-solid fa-circle-check text-gold text-2xl absolute -top-3 -right-3 bg-white rounded-full"></i>
+                        </div>
+
+                        <i class="fa-solid fa-angles-right text-neutral-300 text-2xl sm:text-4xl shrink-0"></i>
+
+                        <div class="flex flex-col items-center gap-3 w-44 sm:w-52 shrink-0 relative">
+                            <div class="w-full rounded-t-xl overflow-hidden shadow-lg border border-neutral-300">
+                                <div class="flex items-center gap-1.5 px-3 py-1.5" style="background:#2b2b2b">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                                </div>
+                                <div class="bg-white p-5 flex flex-col items-center gap-3">
+                                    <div class="w-12 h-12 rounded-lg bg-neutral-950 text-gold flex items-center justify-center text-xl"><i class="fa-solid fa-file-lines"></i></div>
+                                    <p class="heading-font font-bold text-neutral-950 text-lg sm:text-xl leading-tight text-center">SAT Practice<br>Test 3</p>
+                                </div>
+                            </div>
+                            <div class="w-10 h-3 bg-neutral-300 rounded-b"></div>
+                            <div class="w-20 h-1.5 bg-neutral-400 rounded-full"></div>
+                            <i class="fa-solid fa-circle-check text-gold text-2xl absolute -top-3 -right-3 bg-white rounded-full"></i>
+                        </div>
+                    </div>
+
+                    <!-- Score gauge -->
+                    <div class="pt-2 pb-4">
+                        <svg viewBox="0 -40 800 430" class="w-full max-w-2xl mx-auto">
+                            <path d="M 100.0,340.0 A 300,300 0 0 1 700.0,340.0" fill="none" stroke="#e5e5e5" stroke-width="20" stroke-linecap="round"></path>
+                            <line x1="120.0" y1="340.0" x2="80.0" y2="340.0" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="127.0" y1="277.7" x2="88.0" y2="268.8" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="147.7" y1="218.5" x2="111.7" y2="201.2" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="181.1" y1="165.4" x2="149.8" y2="140.5" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="225.4" y1="121.1" x2="200.5" y2="89.8" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="278.5" y1="87.7" x2="261.2" y2="51.7" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="337.7" y1="67.0" x2="328.8" y2="28.0" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="400.0" y1="60.0" x2="400.0" y2="20.0" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="462.3" y1="67.0" x2="471.2" y2="28.0" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="521.5" y1="87.7" x2="538.8" y2="51.7" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="574.6" y1="121.1" x2="599.5" y2="89.8" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="618.9" y1="165.4" x2="650.2" y2="140.5" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="652.3" y1="218.5" x2="688.3" y2="201.2" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="673.0" y1="277.7" x2="712.0" y2="268.8" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="680.0" y1="340.0" x2="720.0" y2="340.0" stroke="#78716c" stroke-width="3"></line>
+                            <line x1="101.9" y1="306.4" x2="86.0" y2="304.6" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="116.8" y1="240.9" x2="101.7" y2="235.6" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="146.0" y1="180.4" x2="132.4" y2="171.9" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="187.9" y1="127.9" x2="176.6" y2="116.6" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="240.4" y1="86.0" x2="231.9" y2="72.4" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="300.9" y1="56.8" x2="295.6" y2="41.7" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="366.4" y1="41.9" x2="364.6" y2="26.0" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="433.6" y1="41.9" x2="435.4" y2="26.0" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="499.1" y1="56.8" x2="504.4" y2="41.7" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="559.6" y1="86.0" x2="568.1" y2="72.4" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="612.1" y1="127.9" x2="623.4" y2="116.6" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="654.0" y1="180.4" x2="667.6" y2="171.9" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="683.2" y1="240.9" x2="698.3" y2="235.6" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <line x1="698.1" y1="306.4" x2="714.0" y2="304.6" stroke="#c7c1b4" stroke-width="1.5"></line>
+                            <text x="45.0" y="340.0" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(-90.0 45.0 340.0)">200</text>
+                            <text x="53.9" y="261.0" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(-77.1 53.9 261.0)">300</text>
+                            <text x="80.2" y="186.0" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(-64.3 80.2 186.0)">400</text>
+                            <text x="122.4" y="118.7" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(-51.4 122.4 118.7)">500</text>
+                            <text x="178.7" y="62.4" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(-38.6 178.7 62.4)">600</text>
+                            <text x="246.0" y="20.2" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(-25.7 246.0 20.2)">700</text>
+                            <text x="321.0" y="-6.1" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(-12.9 321.0 -6.1)">800</text>
+                            <text x="400.0" y="-15.0" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(0.0 400.0 -15.0)">900</text>
+                            <text x="479.0" y="-6.1" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(12.9 479.0 -6.1)">1000</text>
+                            <text x="554.0" y="20.2" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(25.7 554.0 20.2)">1100</text>
+                            <text x="621.3" y="62.4" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(38.6 621.3 62.4)">1200</text>
+                            <text x="677.6" y="118.7" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(51.4 677.6 118.7)">1300</text>
+                            <text x="719.8" y="186.0" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(64.3 719.8 186.0)">1400</text>
+                            <text x="746.1" y="261.0" text-anchor="middle" font-size="22.7" font-weight="700" fill="#57534e" font-family="Georgia, serif" transform="rotate(77.1 746.1 261.0)">1500</text>
+                            <text x="755.0" y="340.0" text-anchor="middle" font-size="22.7" font-weight="700" fill="#c5a043" font-family="Georgia, serif" transform="rotate(90.0 755.0 340.0)">1600</text>
+                            <line x1="400" y1="340" x2="295.0" y2="39.8" stroke="#57534e" stroke-width="5" stroke-linecap="round" stroke-dasharray="4,10"></line>
+                            <line x1="400" y1="340" x2="720.0" y2="303.9" stroke="#0a0a0a" stroke-width="10" stroke-linecap="round"></line>
+                            <path d="M 375.0,202.2 A 140,140 0 0 1 528.7,285.0" fill="none" stroke="#c5a043" stroke-width="5" stroke-linecap="round"></path>
+                            <polygon points="533.0,295.1 519.1,281.5 532.9,275.6" fill="#c5a043"></polygon>
+                            <circle cx="400" cy="340" r="18" fill="#0a0a0a"></circle>
+                        </svg>
+                    </div>
+
+                    <div class="bg-neutral-50 border border-neutral-200/60 rounded-xl p-5 text-left max-w-2xl mx-auto">
+                        <p class="text-lg sm:text-xl text-neutral-600 font-light leading-relaxed">Students build the Stamina, Temperament, Confidence, and Consistency needed to excel on Test Day by writing Full Length Practice Tests that simulate the Digital SAT.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- NEW SECTION: Your Journey to a Top SAT Score (Home - Section 5) -->
+    <section id="journey" class="max-w-none w-full px-4 sm:px-8 lg:px-12 py-24 bg-stone-50 border-b border-neutral-100">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+
+            <div class="lg:col-span-6 space-y-6">
+                <span class="text-gold font-bold uppercase tracking-widest text-xs tracking-[0.2em]">Getting Started</span>
+                <h2 class="heading-font text-[36px] sm:text-[48px] font-semibold tracking-tight text-neutral-950 leading-tight">Your Journey to a Top SAT Score Starts Here!</h2>
+                <p class="text-neutral-600 text-base sm:text-[18px] font-light leading-relaxed">
+                    Every student's journey is different. That's why every <span class="brand-brag">Brag</span><span class="brand-sat">SAT</span> engagement begins with a personalized consultation. We'll understand your current performance, identify your strengths and improvement areas, discuss your target score, and outline a strategy tailored specifically to your goals. No generic sales pitch &mdash; just honest guidance from experienced Subject Matter Experts.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                    <div class="flex items-center gap-3 bg-neutral-50 border border-neutral-200/60 rounded-xl px-4 py-3.5">
+                        <i class="fa-solid fa-file-circle-check text-gold text-[18px]"></i>
+                        <span class="text-sm font-bold text-neutral-800">Free Full-Length Diagnostic Test</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-neutral-50 border border-neutral-200/60 rounded-xl px-4 py-3.5">
+                        <i class="fa-solid fa-comments text-gold text-[18px]"></i>
+                        <span class="text-sm font-bold text-neutral-800">One-on-One Discussion</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-neutral-50 border border-neutral-200/60 rounded-xl px-4 py-3.5">
+                        <i class="fa-solid fa-list-check text-gold text-[18px]"></i>
+                        <span class="text-sm font-bold text-neutral-800">Personalised Diagnostic Review</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-neutral-50 border border-neutral-200/60 rounded-xl px-4 py-3.5">
+                        <i class="fa-solid fa-heart text-gold text-[18px]"></i>
+                        <span class="text-sm font-bold text-neutral-800">Absolutely No Obligation</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-6 relative flex items-center justify-center h-full">
+                <div class="relative mx-auto max-w-[600px] w-full h-[520px] rounded-[2.5rem] p-3 border border-neutral-200 bg-neutral-50 shadow-xl overflow-hidden">
+                    <div class="relative w-full h-full rounded-[2rem] overflow-hidden bg-neutral-950">
+                        <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&q=80&w=800" alt="Consultation call mapping out a student's SAT strategy" class="absolute inset-0 w-full h-full object-cover brightness-[0.75] contrast-105">
+                        <div class="absolute bottom-6 inset-x-6 bg-neutral-950/90 backdrop-blur-md p-6 rounded-2xl border border-neutral-800 shadow-xl">
+                            <p class="text-xs font-black text-gold tracking-widest uppercase">Step Zero</p>
+                            <p class="heading-font text-base font-bold text-white mt-1 leading-snug">A free, honest strategy call before any commitment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-12 flex justify-center pt-6">
+                <a href="#consultation-form" class="inline-flex items-center gap-4 bg-gold-gradient text-neutral-950 font-black px-16 py-7 rounded-2xl transition-all shadow-xl shadow-amber-500/20 text-center tracking-wider text-[18px] sm:text-[20px] uppercase border border-amber-400/20 hover:-translate-y-0.5">
+                    <i class="fa-solid fa-calendar-check text-[20px] sm:text-[24px]"></i> Schedule a Free Consultation Call
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Corporate Footer Base -->
+    <footer class="bg-neutral-950 text-neutral-500 py-12 text-center text-xs space-y-4 border-t border-neutral-900 w-full">
+        <div class="bg-white rounded-2xl p-3 inline-flex items-center justify-center shadow-lg">
+            <img src="data:image/png;base64,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" alt="BragSAT Logo" class="h-12 w-auto object-contain">
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8 px-4 max-w-5xl mx-auto pt-2">
+            <div class="flex items-center gap-5 order-2 sm:order-1">
+                <a href="terms.html" class="w-10 h-10 flex items-center justify-center rounded-full border border-neutral-800 text-neutral-300 hover:text-gold hover:border-gold transition-colors" title="Terms &amp; Conditions" aria-label="Terms and Conditions"><i class="fa-solid fa-file-contract text-lg"></i></a>
+                <a href="privacy.html" class="w-10 h-10 flex items-center justify-center rounded-full border border-neutral-800 text-neutral-300 hover:text-gold hover:border-gold transition-colors" title="Privacy Policy" aria-label="Privacy Policy"><i class="fa-solid fa-user-shield text-lg"></i></a>
+            </div>
+
+            <p class="font-light tracking-wide order-1 sm:order-2">&copy; 2026 <span class="brand-brag-light">Brag</span><span class="brand-sat">SAT</span>. All Rights Reserved. SAT is a trademark registered by the College Board, which is not affiliated with and does not endorse this site.</p>
+
+            <div class="flex items-center gap-5 order-3">
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-neutral-800 text-neutral-300 hover:text-gold hover:border-gold transition-colors" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram text-lg"></i></a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-neutral-800 text-neutral-300 hover:text-gold hover:border-gold transition-colors" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-neutral-800 text-neutral-300 hover:text-gold hover:border-gold transition-colors" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube text-lg"></i></a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-neutral-800 text-neutral-300 hover:text-gold hover:border-gold transition-colors" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Menu Toggle Action Script -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { 
+            menu.classList.toggle('hidden'); 
+        });
+    </script>
+<!-- ============================================================
+     BRAGSAT REGISTRATION FORM — modal + styles + logic
+     Injected before </body>. Self-contained: no build step.
+     ============================================================ -->
+<style>
+    :root{
+        --bs-gold:#c5a043;
+        --bs-gold-light:#ebd087;
+        --bs-gold-dark:#9a7929;
+        --bs-ink:#0a0a0a;
+        --bs-line:#e5e5e5;
+        --bs-muted:#737373;
+    }
+    #bs-form-overlay{
+        position:fixed; inset:0; z-index:100;
+        background:rgba(10,10,10,.65);
+        backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+        display:none; align-items:flex-start; justify-content:center;
+        padding:24px 16px; overflow-y:auto;
+    }
+    #bs-form-overlay.is-open{display:flex;}
+    .bs-panel{
+        background:#fff; width:100%; max-width:760px; border-radius:24px;
+        box-shadow:0 30px 80px rgba(10,10,10,.35);
+        border:1px solid var(--bs-line); overflow:hidden;
+        font-family:'Inter',sans-serif; color:#171717;
+        animation:bs-rise .28s cubic-bezier(.2,.8,.3,1) both;
+        margin:auto;
+    }
+    @keyframes bs-rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+    @media (prefers-reduced-motion:reduce){.bs-panel{animation:none}}
+
+    .bs-head{
+        padding:26px 28px 0; position:relative;
+        border-bottom:1px solid var(--bs-line);
+    }
+    .bs-eyebrow{
+        font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+        font-weight:700; color:var(--bs-gold-dark);
+    }
+    .bs-title{
+        font-family:'Sora',sans-serif; font-weight:600; letter-spacing:-.02em;
+        font-size:26px; color:var(--bs-ink); margin:6px 0 4px;
+    }
+    .bs-sub{font-size:14px; color:var(--bs-muted); margin:0 0 18px; max-width:52ch;}
+    .bs-close{
+        position:absolute; top:20px; right:20px;
+        width:40px; height:40px; border-radius:12px; border:1px solid var(--bs-line);
+        background:#fafafa; color:#404040; font-size:16px; cursor:pointer;
+        display:flex; align-items:center; justify-content:center; transition:.2s;
+    }
+    .bs-close:hover{background:var(--bs-ink); color:#fff; border-color:var(--bs-ink);}
+
+    .bs-steps{display:flex; gap:4px; padding:0 0 0;}
+    .bs-step{flex:1; padding-bottom:14px; text-align:center; position:relative;}
+    .bs-step span{
+        font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+        color:#a3a3a3; transition:.25s;
+    }
+    .bs-step::after{
+        content:''; position:absolute; left:0; right:0; bottom:0; height:3px;
+        background:var(--bs-line); border-radius:3px; transition:.3s;
+    }
+    .bs-step.is-active span{color:var(--bs-ink);}
+    .bs-step.is-active::after,.bs-step.is-done::after{
+        background:linear-gradient(135deg,var(--bs-gold-light) 0%,var(--bs-gold) 50%,var(--bs-gold-dark) 100%);
+    }
+    .bs-step.is-done span{color:var(--bs-gold-dark);}
+
+    .bs-body{padding:28px; max-height:min(62vh,620px); overflow-y:auto;}
+    .bs-fieldset{display:none;}
+    .bs-fieldset.is-active{display:block;}
+    .bs-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+    .bs-grid .bs-full{grid-column:1/-1;}
+    @media (max-width:620px){.bs-grid{grid-template-columns:1fr;} .bs-body{padding:20px;} .bs-title{font-size:22px;}}
+
+    .bs-field label{
+        display:block; font-size:13px; font-weight:600; color:#262626;
+        margin-bottom:7px; line-height:1.45;
+    }
+    .bs-field label .bs-req{color:var(--bs-gold-dark); margin-left:2px;}
+    .bs-hint{display:block; font-weight:400; font-size:12px; color:var(--bs-muted); margin-top:2px;}
+    .bs-field input,.bs-field select,.bs-field textarea{
+        width:100%; padding:12px 14px; font-size:14px; font-family:inherit; color:#171717;
+        background:#fff; border:1px solid #d4d4d4; border-radius:12px; transition:.18s;
+        appearance:none; -webkit-appearance:none;
+    }
+    .bs-field textarea{min-height:118px; resize:vertical;}
+    .bs-field select{
+        background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23737373' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat:no-repeat; background-position:right 12px center; background-size:18px;
+        padding-right:38px; cursor:pointer;
+    }
+    .bs-field input:focus,.bs-field select:focus,.bs-field textarea:focus{
+        outline:none; border-color:var(--bs-gold); box-shadow:0 0 0 3px rgba(197,160,67,.18);
+    }
+    .bs-field.has-error input,.bs-field.has-error select,.bs-field.has-error textarea{
+        border-color:#dc2626; box-shadow:0 0 0 3px rgba(220,38,38,.12);
+    }
+    .bs-error{display:none; font-size:12px; color:#dc2626; margin-top:6px; font-weight:500;}
+    .bs-field.has-error .bs-error{display:block;}
+    .bs-count{font-size:11px; color:#a3a3a3; text-align:right; margin-top:6px;}
+
+    .bs-phone{display:grid; grid-template-columns:130px 1fr; gap:10px;}
+    .bs-group-title{
+        font-family:'Sora',sans-serif; font-size:15px; font-weight:600; color:var(--bs-ink);
+        margin:0 0 4px; display:flex; align-items:center; gap:9px;
+    }
+    .bs-group-title i{color:var(--bs-gold);}
+    .bs-group-note{font-size:13px; color:var(--bs-muted); margin:0 0 22px;}
+
+    .bs-toggle{display:flex; gap:10px;}
+    .bs-toggle input{position:absolute; opacity:0; width:0; height:0;}
+    .bs-toggle label{
+        flex:1; margin:0; text-align:center; padding:11px 0; border:1px solid #d4d4d4;
+        border-radius:12px; cursor:pointer; font-weight:600; font-size:14px; color:#525252;
+        transition:.18s; background:#fff;
+    }
+    .bs-toggle input:checked + label{
+        background:var(--bs-ink); color:#fff; border-color:var(--bs-ink);
+    }
+    .bs-toggle input:focus-visible + label{box-shadow:0 0 0 3px rgba(197,160,67,.35);}
+
+    .bs-conditional{
+        display:none; margin-top:20px; padding:20px; border-radius:16px;
+        background:#fafafa; border:1px solid var(--bs-line);
+        border-left:3px solid var(--bs-gold);
+    }
+    .bs-conditional.is-open{display:block;}
+    .bs-conditional h4{
+        font-family:'Sora',sans-serif; font-size:13px; font-weight:600; text-transform:uppercase;
+        letter-spacing:.08em; color:var(--bs-gold-dark); margin:0 0 16px;
+    }
+    .bs-divider{height:1px; background:var(--bs-line); margin:24px 0;}
+
+    .bs-foot{
+        padding:18px 28px; border-top:1px solid var(--bs-line); background:#fafafa;
+        display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .bs-btn{
+        font-family:inherit; font-size:12px; font-weight:800; letter-spacing:.12em;
+        text-transform:uppercase; padding:15px 26px; border-radius:12px; cursor:pointer;
+        transition:.2s; border:1px solid transparent; display:inline-flex; align-items:center; gap:9px;
+    }
+    .bs-btn-primary{background:var(--bs-ink); color:#fff; border-color:var(--bs-ink); box-shadow:0 4px 14px rgba(10,10,10,.18);}
+    .bs-btn-primary:hover{transform:translateY(-1px); background:#171717;}
+    .bs-btn-primary i{color:var(--bs-gold);}
+    .bs-btn-primary:disabled{opacity:.6; cursor:wait; transform:none;}
+    .bs-btn-ghost{background:transparent; color:#525252; border-color:#d4d4d4;}
+    .bs-btn-ghost:hover{background:#fff; color:var(--bs-ink); border-color:var(--bs-ink);}
+    .bs-btn-ghost[hidden]{display:none;}
+    .bs-progress-label{font-size:11px; color:var(--bs-muted); font-weight:600; letter-spacing:.08em; text-transform:uppercase;}
+
+    .bs-done{padding:56px 32px; text-align:center; display:none;}
+    .bs-done.is-open{display:block;}
+    .bs-done i{
+        font-size:30px; color:var(--bs-gold); width:70px; height:70px; border-radius:20px;
+        border:1px solid var(--bs-line); background:#fafafa;
+        display:flex; align-items:center; justify-content:center; margin:0 auto 22px;
+    }
+    .bs-done h3{font-family:'Sora',sans-serif; font-size:24px; font-weight:600; color:var(--bs-ink); margin:0 0 10px;}
+    .bs-done p{color:var(--bs-muted); font-size:14px; max-width:40ch; margin:0 auto 26px;}
+    .bs-match{
+        background:#fafafa; border:1px solid var(--bs-line); border-left:3px solid var(--bs-gold);
+        border-radius:12px; padding:12px 16px; font-size:13px !important; max-width:46ch !important;
+        text-align:left; color:#404040 !important;
+    }
+    .bs-match strong{color:var(--bs-ink);}
+    .bs-founders{
+        display:grid; grid-template-columns:1fr 1fr; gap:14px;
+        max-width:560px; margin:0 auto 18px;
+    }
+    .bs-founder-btn{
+        display:flex; flex-direction:column; align-items:center; gap:6px; text-decoration:none;
+        border:1px solid var(--bs-line); border-radius:18px; background:#fafafa;
+        padding:26px 18px; transition:.2s; text-align:center;
+    }
+    .bs-founder-btn:hover{
+        background:#fff; border-color:var(--bs-ink);
+        transform:translateY(-2px); box-shadow:0 8px 22px rgba(10,10,10,.10);
+    }
+    .bs-founder-role{
+        font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
+        color:var(--bs-muted);
+    }
+    .bs-founder-name{
+        font-family:'Sora',sans-serif; font-size:18px; font-weight:600; color:var(--bs-ink);
+    }
+    .bs-founder-cta{
+        font-size:12px; font-weight:700; color:var(--bs-gold-dark);
+        display:inline-flex; align-items:center; gap:7px; margin-top:2px;
+    }
+    .bs-booking-note{font-size:12px; color:var(--bs-muted); margin:0 auto 4px;}
+    @media (max-width:620px){
+        .bs-founders{grid-template-columns:1fr;}
+        .bs-done{padding:36px 20px;}
+    }
+    body.bs-locked{overflow:hidden;}
+</style>
+
+<div id="bs-form-overlay" role="dialog" aria-modal="true" aria-labelledby="bs-form-title">
+  <div class="bs-panel">
+
+    <div class="bs-head">
+      <button type="button" class="bs-close" id="bs-close" aria-label="Close form"><i class="fa-solid fa-xmark"></i></button>
+      <p class="bs-eyebrow">Student Registration</p>
+      <h2 class="bs-title" id="bs-form-title">Tell us about your SAT journey</h2>
+      <p class="bs-sub">Four short sections. Your answers shape the study plan we build for your free consultation call.</p>
+      <div class="bs-steps">
+        <div class="bs-step is-active" data-step="0"><span>Basics</span></div>
+        <div class="bs-step" data-step="1"><span>SAT Profile</span></div>
+        <div class="bs-step" data-step="2"><span>Academics</span></div>
+        <div class="bs-step" data-step="3"><span>Mentorship</span></div>
+      </div>
+    </div>
+
+    <form id="bs-form" novalidate>
+      <div class="bs-body" id="bs-body">
+
+        <!-- ── STEP 1 ─────────────────────────────── -->
+        <fieldset class="bs-fieldset is-active" data-step="0">
+          <h3 class="bs-group-title"><i class="fa-solid fa-user"></i> Basic information</h3>
+          <p class="bs-group-note">So we know who we're speaking to and when to call.</p>
+          <div class="bs-grid">
+            <div class="bs-field bs-full">
+              <label for="bs-name">Full name <span class="bs-req">*</span></label>
+              <input type="text" id="bs-name" name="fullName" autocomplete="name" placeholder="As it appears on your ID">
+              <p class="bs-error">Enter your full name using letters only.</p>
+            </div>
+
+            <div class="bs-field bs-full">
+              <label for="bs-phone">Mobile number <span class="bs-req">*</span></label>
+              <div class="bs-phone">
+                <select id="bs-dial" name="dialCode" aria-label="Country dialling code"></select>
+                <input type="tel" id="bs-phone" name="mobile" inputmode="numeric" autocomplete="tel-national" placeholder="98765 43210">
+              </div>
+              <p class="bs-error">Enter a valid mobile number (6–15 digits).</p>
+            </div>
+
+            <div class="bs-field bs-full">
+              <label for="bs-email">Email address <span class="bs-req">*</span></label>
+              <input type="email" id="bs-email" name="email" autocomplete="email" placeholder="you@example.com">
+              <p class="bs-error">Enter a valid email address.</p>
+            </div>
+
+            <div class="bs-field">
+              <label for="bs-country">Country <span class="bs-req">*</span></label>
+              <select id="bs-country" name="country"></select>
+              <p class="bs-error">Select your country.</p>
+            </div>
+
+            <div class="bs-field">
+              <label for="bs-city">City <span class="bs-req">*</span></label>
+              <input type="text" id="bs-city" name="city" autocomplete="address-level2" placeholder="e.g. Delhi">
+              <p class="bs-error">Enter your city.</p>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ── STEP 2 ─────────────────────────────── -->
+        <fieldset class="bs-fieldset" data-step="1">
+          <h3 class="bs-group-title"><i class="fa-solid fa-chart-line"></i> SAT profile</h3>
+          <p class="bs-group-note">Scores tell us where the points are hiding. Estimates are fine.</p>
+
+          <div class="bs-field">
+            <label>Have you written a mock SAT recently? <span class="bs-req">*</span></label>
+            <div class="bs-toggle" data-controls="bs-mock-block">
+              <input type="radio" id="bs-mock-yes" name="writtenMock" value="Yes"><label for="bs-mock-yes">Yes</label>
+              <input type="radio" id="bs-mock-no" name="writtenMock" value="No"><label for="bs-mock-no">No</label>
+            </div>
+            <p class="bs-error">Choose yes or no.</p>
+          </div>
+
+          <div class="bs-conditional" id="bs-mock-block">
+            <h4>Your mock SAT</h4>
+            <div class="bs-grid">
+              <div class="bs-field">
+                <label for="bs-mock-total">Overall score <span class="bs-hint">Out of 1600</span></label>
+                <input type="number" id="bs-mock-total" name="mockTotal" min="400" max="1600" step="10" placeholder="1200">
+                <p class="bs-error">Enter a score between 400 and 1600.</p>
+              </div>
+              <div class="bs-field">
+                <label for="bs-mock-months">Months since the mock</label>
+                <input type="number" id="bs-mock-months" name="mockMonthsAgo" min="0" max="120" placeholder="2">
+                <p class="bs-error">Enter a number of months.</p>
+              </div>
+              <div class="bs-field">
+                <label for="bs-mock-math">Math score <span class="bs-hint">Out of 800</span></label>
+                <input type="number" id="bs-mock-math" name="mockMath" min="200" max="800" step="10" placeholder="620">
+                <p class="bs-error">Enter a score between 200 and 800.</p>
+              </div>
+              <div class="bs-field">
+                <label for="bs-mock-rw">Reading &amp; Writing score <span class="bs-hint">Out of 800</span></label>
+                <input type="number" id="bs-mock-rw" name="mockRW" min="200" max="800" step="10" placeholder="580">
+                <p class="bs-error">Enter a score between 200 and 800.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bs-divider"></div>
+
+          <div class="bs-field">
+            <label>Have you written the actual SAT? <span class="bs-req">*</span></label>
+            <div class="bs-toggle" data-controls="bs-real-block">
+              <input type="radio" id="bs-real-yes" name="writtenReal" value="Yes"><label for="bs-real-yes">Yes</label>
+              <input type="radio" id="bs-real-no" name="writtenReal" value="No"><label for="bs-real-no">No</label>
+            </div>
+            <p class="bs-error">Choose yes or no.</p>
+          </div>
+
+          <div class="bs-conditional" id="bs-real-block">
+            <h4>Most recent official attempt</h4>
+            <div class="bs-grid">
+              <div class="bs-field">
+                <label for="bs-real-total">Overall score <span class="bs-hint">Out of 1600</span></label>
+                <input type="number" id="bs-real-total" name="recentTotal" min="400" max="1600" step="10" placeholder="1310">
+                <p class="bs-error">Enter a score between 400 and 1600.</p>
+              </div>
+              <div class="bs-field">
+                <label for="bs-real-months">Months since that attempt</label>
+                <input type="number" id="bs-real-months" name="recentMonthsAgo" min="0" max="120" placeholder="5">
+                <p class="bs-error">Enter a number of months.</p>
+              </div>
+              <div class="bs-field">
+                <label for="bs-real-math">Math score <span class="bs-hint">Out of 800</span></label>
+                <input type="number" id="bs-real-math" name="recentMath" min="200" max="800" step="10" placeholder="680">
+                <p class="bs-error">Enter a score between 200 and 800.</p>
+              </div>
+              <div class="bs-field">
+                <label for="bs-real-rw">Reading &amp; Writing score <span class="bs-hint">Out of 800</span></label>
+                <input type="number" id="bs-real-rw" name="recentRW" min="200" max="800" step="10" placeholder="630">
+                <p class="bs-error">Enter a score between 200 and 800.</p>
+              </div>
+            </div>
+
+            <h4 style="margin-top:24px;">Best scores to date</h4>
+            <p style="font-size:12px;color:#737373;margin:-10px 0 16px;">Sat it only once? Repeat the same scores.</p>
+            <div class="bs-grid">
+              <div class="bs-field bs-full">
+                <label for="bs-best-total">Highest overall score <span class="bs-hint">Out of 1600</span></label>
+                <input type="number" id="bs-best-total" name="bestTotal" min="400" max="1600" step="10" placeholder="1310">
+                <p class="bs-error">Enter a score between 400 and 1600.</p>
+              </div>
+              <div class="bs-field">
+                <label for="bs-best-math">Highest Math <span class="bs-hint">Out of 800</span></label>
+                <input type="number" id="bs-best-math" name="bestMath" min="200" max="800" step="10" placeholder="700">
+                <p class="bs-error">Enter a score between 200 and 800.</p>
+              </div>
+              <div class="bs-field">
+                <label for="bs-best-rw">Highest Reading &amp; Writing <span class="bs-hint">Out of 800</span></label>
+                <input type="number" id="bs-best-rw" name="bestRW" min="200" max="800" step="10" placeholder="650">
+                <p class="bs-error">Enter a score between 200 and 800.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bs-divider"></div>
+
+          <div class="bs-grid">
+            <div class="bs-field">
+              <label for="bs-target-month">When do you want to sit the SAT? <span class="bs-req">*</span></label>
+              <select id="bs-target-month" name="targetMonth">
+                <option value="">Select month</option>
+                <option>March</option>
+                <option>April</option><option>May</option><option>June</option>
+                <option>July</option><option>August</option><option>September</option>
+                <option>October</option><option>November</option><option>December</option>
+                <option selected>Not decided yet</option>
+              </select>
+              <p class="bs-error">Select a month.</p>
+            </div>
+            <div class="bs-field">
+              <label for="bs-target-year">Target year <span class="bs-req">*</span></label>
+              <select id="bs-target-year" name="targetYear"></select>
+              <p class="bs-error">Select a year.</p>
+            </div>
+
+            <div class="bs-field bs-full">
+              <label>Have you registered for that sitting? <span class="bs-req">*</span></label>
+              <div class="bs-toggle">
+                <input type="radio" id="bs-reg-yes" name="registered" value="Yes"><label for="bs-reg-yes">Yes</label>
+                <input type="radio" id="bs-reg-no" name="registered" value="No"><label for="bs-reg-no">No</label>
+              </div>
+              <p class="bs-error">Choose yes or no.</p>
+            </div>
+
+            <div class="bs-field bs-full">
+              <label for="bs-prep">How have you prepared so far? <span class="bs-req">*</span></label>
+              <select id="bs-prep" name="prepMode">
+                <option value="">Select one</option>
+                <option>Self-study</option>
+                <option>Coaching institute</option>
+                <option>Private tutor</option>
+                <option>Online course</option>
+                <option>No preparation yet</option>
+              </select>
+              <p class="bs-error">Select an option.</p>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ── STEP 3 ─────────────────────────────── -->
+        <fieldset class="bs-fieldset" data-step="2">
+          <h3 class="bs-group-title"><i class="fa-solid fa-graduation-cap"></i> Academic profile</h3>
+          <p class="bs-group-note">Your board and grade decide how much runway we have.</p>
+          <div class="bs-grid">
+            <div class="bs-field">
+              <label for="bs-grade">Current grade <span class="bs-req">*</span></label>
+              <select id="bs-grade" name="grade">
+                <option value="">Select grade</option>
+                <option>Grade 8</option><option>Grade 9</option><option>Grade 10</option>
+                <option>Grade 11</option><option>Grade 12</option>
+                <option>Gap year / already graduated</option>
+              </select>
+              <p class="bs-error">Select your grade.</p>
+            </div>
+            <div class="bs-field">
+              <label for="bs-gradyear">Expected Grade 12 graduation year <span class="bs-req">*</span></label>
+              <select id="bs-gradyear" name="graduationYear"></select>
+              <p class="bs-error">Select a year.</p>
+            </div>
+            <div class="bs-field bs-full">
+              <label for="bs-school">School name <span class="bs-req">*</span><span class="bs-hint">Full name, no abbreviations</span></label>
+              <input type="text" id="bs-school" name="school" placeholder="e.g. Delhi Public School, R.K. Puram">
+              <p class="bs-error">Enter your school's full name.</p>
+            </div>
+            <div class="bs-field bs-full">
+              <label for="bs-curriculum">Curriculum <span class="bs-req">*</span></label>
+              <select id="bs-curriculum" name="curriculum">
+                <option value="">Select curriculum</option>
+                <option>CBSE</option><option>ICSE</option><option>IB</option>
+                <option>IGCSE / Cambridge</option><option>State Board</option>
+                <option>American Curriculum</option><option>Other</option>
+              </select>
+              <p class="bs-error">Select your curriculum.</p>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ── STEP 4 ─────────────────────────────── -->
+        <fieldset class="bs-fieldset" data-step="3">
+          <h3 class="bs-group-title"><i class="fa-solid fa-compass-drafting"></i> Mentorship requirements</h3>
+          <p class="bs-group-note">The more specific you are here, the sharper your consultation call will be.</p>
+          <div class="bs-grid">
+            <div class="bs-field bs-full">
+              <label for="bs-program">Which program interests you? <span class="bs-req">*</span></label>
+              <select id="bs-program" name="program">
+                <option value="">Select a program</option>
+                <option>Complete SAT Mentorship</option>
+                <option>English only</option>
+                <option>Math only</option>
+              </select>
+              <p class="bs-error">Select a program.</p>
+            </div>
+            <div class="bs-field bs-full">
+              <label for="bs-challenges">What are your biggest challenges on the SAT? <span class="bs-req">*</span></label>
+              <textarea id="bs-challenges" name="challenges" maxlength="5000" data-count="bs-challenges-count" placeholder="Timing on Reading, careless errors in Algebra, vocabulary in context — be as specific as you like."></textarea>
+              <p class="bs-count"><span id="bs-challenges-count">0</span> / 5000</p>
+              <p class="bs-error">Tell us at least a sentence about where you struggle.</p>
+            </div>
+            <div class="bs-field bs-full">
+              <label for="bs-notes">Anything else we should know about your prep?<span class="bs-hint">Optional</span></label>
+              <textarea id="bs-notes" name="notes" maxlength="5000" data-count="bs-notes-count" placeholder="Deadlines, school workload, past tutoring, target colleges."></textarea>
+              <p class="bs-count"><span id="bs-notes-count">0</span> / 5000</p>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="bs-foot" id="bs-foot">
+        <button type="button" class="bs-btn bs-btn-ghost" id="bs-back" hidden><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <span class="bs-progress-label" id="bs-progress">Step 1 of 4</span>
+        <button type="button" class="bs-btn bs-btn-primary" id="bs-next">Continue <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </form>
+
+    <div class="bs-done" id="bs-done">
+      <i class="fa-solid fa-check"></i>
+      <h3>Profile saved. Now pick your slot.</h3>
+      <p>Pick a founder below to open their calendar. You'll get a confirmation and meeting link straight away.</p>
+      <p class="bs-match">Book with <strong id="bs-done-email"></strong> so we can match your slot to the profile you just filled in.</p>
+      <div class="bs-founders">
+        <a class="bs-founder-btn" id="bs-book-abhishek" href="https://calendly.com/abhishek-raj-bragsat/30min" target="_blank" rel="noopener">
+          <span class="bs-founder-role">Schedule with</span>
+          <span class="bs-founder-name">Abhishek Raj</span>
+          <span class="bs-founder-cta">Book 30 min <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="bs-founder-btn" id="bs-book-anant" href="https://calendly.com/anant-mittal-bragsat/30min" target="_blank" rel="noopener">
+          <span class="bs-founder-role">Schedule with</span>
+          <span class="bs-founder-name">Anant Mittal</span>
+          <span class="bs-founder-cta">Book 30 min <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+      </div>
+      <p class="bs-booking-note">Either founder works &mdash; both calls cover the same ground.</p>
+      <button type="button" class="bs-btn bs-btn-ghost" id="bs-done-close" style="margin-top:26px;">Close</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  /* ---------------------------------------------------------
+     CONFIG — the only three lines you should need to touch.
+     --------------------------------------------------------- */
+
+  // 1. Your Apps Script web-app URL (ends in /exec). See setup guide.
+  var FORM_ENDPOINT = "https://formspree.io/f/xnjeobyn";
+
+  // 2 & 3. Founder Calendly links shown on the success screen.
+  var CALENDLY = {
+    'bs-book-abhishek': "https://calendly.com/abhishek-raj-bragsat/30min",
+    'bs-book-anant':    "https://calendly.com/anant-mittal-bragsat/30min"
+  };
+
+  var overlay = document.getElementById('bs-form-overlay');
+  if (!overlay) return;
+  var form     = document.getElementById('bs-form');
+  var body     = document.getElementById('bs-body');
+  var foot     = document.getElementById('bs-foot');
+  var doneCard = document.getElementById('bs-done');
+  var btnNext  = document.getElementById('bs-next');
+  var btnBack  = document.getElementById('bs-back');
+  var progress = document.getElementById('bs-progress');
+  var steps    = Array.prototype.slice.call(overlay.querySelectorAll('.bs-step'));
+  var sets     = Array.prototype.slice.call(overlay.querySelectorAll('.bs-fieldset'));
+  var current  = 0;
+
+  /* ---------- populate dropdowns ---------- */
+  var COUNTRIES = ["India","United States","United Arab Emirates","United Kingdom","Canada","Australia","Singapore","Saudi Arabia","Qatar","Kuwait","Oman","Bahrain","Nepal","Sri Lanka","Bangladesh","Pakistan","Malaysia","Indonesia","Thailand","Vietnam","Philippines","China","Hong Kong","Japan","South Korea","Germany","France","Netherlands","Switzerland","Spain","Italy","Ireland","Sweden","Norway","Denmark","Poland","Turkey","Russia","South Africa","Nigeria","Kenya","Ghana","Egypt","Ethiopia","Tanzania","Uganda","Zambia","Zimbabwe","Mauritius","New Zealand","Brazil","Mexico","Argentina","Chile","Colombia","Other"];
+  var DIALS = [["India","+91"],["USA / Canada","+1"],["UAE","+971"],["UK","+44"],["Australia","+61"],["Singapore","+65"],["Saudi Arabia","+966"],["Qatar","+974"],["Kuwait","+965"],["Oman","+968"],["Bahrain","+973"],["Nepal","+977"],["Sri Lanka","+94"],["Bangladesh","+880"],["Pakistan","+92"],["Malaysia","+60"],["Indonesia","+62"],["Thailand","+66"],["Hong Kong","+852"],["China","+86"],["Japan","+81"],["South Korea","+82"],["Germany","+49"],["France","+33"],["Netherlands","+31"],["Switzerland","+41"],["Spain","+34"],["Italy","+39"],["Ireland","+353"],["Sweden","+46"],["Turkey","+90"],["Russia","+7"],["South Africa","+27"],["Nigeria","+234"],["Kenya","+254"],["Ghana","+233"],["Egypt","+20"],["New Zealand","+64"],["Brazil","+55"],["Mexico","+52"]];
+
+  var selCountry = document.getElementById('bs-country');
+  selCountry.innerHTML = '<option value="">Select country</option>' +
+    COUNTRIES.map(function (c) { return '<option>' + c + '</option>'; }).join('');
+  selCountry.value = 'India';
+
+  document.getElementById('bs-dial').innerHTML =
+    DIALS.map(function (d) { return '<option value="' + d[1] + '">' + d[1] + ' ' + d[0] + '</option>'; }).join('');
+
+  var thisYear = new Date().getFullYear();
+  function years(from, to) {
+    var out = '<option value="">Select year</option>';
+    for (var y = from; y <= to; y++) out += '<option>' + y + '</option>';
+    return out;
+  }
+  document.getElementById('bs-target-year').innerHTML = years(thisYear, thisYear + 4);
+  document.getElementById('bs-gradyear').innerHTML   = years(thisYear - 1, thisYear + 7);
+
+  /* ---------- character counters ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-count]'), function (el) {
+    var out = document.getElementById(el.getAttribute('data-count'));
+    el.addEventListener('input', function () { out.textContent = el.value.length; });
+  });
+
+  /* ---------- conditional blocks ---------- */
+  Array.prototype.forEach.call(overlay.querySelectorAll('.bs-toggle[data-controls]'), function (group) {
+    var block = document.getElementById(group.getAttribute('data-controls'));
+    group.addEventListener('change', function (e) {
+      var open = e.target.value === 'Yes';
+      block.classList.toggle('is-open', open);
+      if (!open) {
+        Array.prototype.forEach.call(block.querySelectorAll('input'), function (i) {
+          i.value = '';
+          i.closest('.bs-field').classList.remove('has-error');
+        });
+      }
+    });
+  });
+
+  /* ---------- validation ---------- */
+  function fail(el, on) {
+    var wrap = el.closest('.bs-field');
+    if (wrap) wrap.classList.toggle('has-error', on);
+    return !on;
+  }
+  function num(el, lo, hi) {
+    var v = el.value.trim();
+    return fail(el, v === '' || isNaN(v) || +v < lo || +v > hi);
+  }
+  function required(el) { return fail(el, el.value.trim() === ''); }
+
+  function validateStep(i) {
+    var ok = true;
+    if (i === 0) {
+      var name = document.getElementById('bs-name');
+      ok &= fail(name, !/^[A-Za-z\u00C0-\u024F' .-]{2,}$/.test(name.value.trim()));
+      var phone = document.getElementById('bs-phone');
+      ok &= fail(phone, !/^\d{6,15}$/.test(phone.value.replace(/[\s-]/g, '')));
+      var mail = document.getElementById('bs-email');
+      ok &= fail(mail, !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail.value.trim()));
+      ok &= required(selCountry);
+      ok &= required(document.getElementById('bs-city'));
+    }
+    if (i === 1) {
+      var mock = form.querySelector('input[name="writtenMock"]:checked');
+      ok &= fail(document.getElementById('bs-mock-yes'), !mock);
+      if (mock && mock.value === 'Yes') {
+        ok &= num(document.getElementById('bs-mock-total'), 400, 1600);
+        ok &= num(document.getElementById('bs-mock-math'), 200, 800);
+        ok &= num(document.getElementById('bs-mock-rw'), 200, 800);
+        ok &= num(document.getElementById('bs-mock-months'), 0, 120);
+      }
+      var real = form.querySelector('input[name="writtenReal"]:checked');
+      ok &= fail(document.getElementById('bs-real-yes'), !real);
+      if (real && real.value === 'Yes') {
+        ok &= num(document.getElementById('bs-real-total'), 400, 1600);
+        ok &= num(document.getElementById('bs-real-math'), 200, 800);
+        ok &= num(document.getElementById('bs-real-rw'), 200, 800);
+        ok &= num(document.getElementById('bs-real-months'), 0, 120);
+        ok &= num(document.getElementById('bs-best-total'), 400, 1600);
+        ok &= num(document.getElementById('bs-best-math'), 200, 800);
+        ok &= num(document.getElementById('bs-best-rw'), 200, 800);
+      }
+      ok &= required(document.getElementById('bs-target-month'));
+      ok &= required(document.getElementById('bs-target-year'));
+      var reg = form.querySelector('input[name="registered"]:checked');
+      ok &= fail(document.getElementById('bs-reg-yes'), !reg);
+      ok &= required(document.getElementById('bs-prep'));
+    }
+    if (i === 2) {
+      ok &= required(document.getElementById('bs-grade'));
+      ok &= required(document.getElementById('bs-gradyear'));
+      ok &= required(document.getElementById('bs-school'));
+      ok &= required(document.getElementById('bs-curriculum'));
+    }
+    if (i === 3) {
+      ok &= required(document.getElementById('bs-program'));
+      var ch = document.getElementById('bs-challenges');
+      ok &= fail(ch, ch.value.trim().length < 10);
+    }
+    if (!ok) {
+      var first = sets[i].querySelector('.has-error');
+      if (first && first.scrollIntoView) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    return !!ok;
+  }
+
+  /* ---------- step navigation ---------- */
+  function show(i) {
+    current = i;
+    sets.forEach(function (s, n) { s.classList.toggle('is-active', n === i); });
+    steps.forEach(function (s, n) {
+      s.classList.toggle('is-active', n === i);
+      s.classList.toggle('is-done', n < i);
+    });
+    btnBack.hidden = i === 0;
+    btnNext.innerHTML = (i === sets.length - 1)
+      ? 'Submit registration <i class="fa-solid fa-paper-plane"></i>'
+      : 'Continue <i class="fa-solid fa-arrow-right"></i>';
+    progress.textContent = 'Step ' + (i + 1) + ' of ' + sets.length;
+    body.scrollTop = 0;
+  }
+
+  btnNext.addEventListener('click', function () {
+    if (!validateStep(current)) return;
+    if (current < sets.length - 1) { show(current + 1); return; }
+    submit();
+  });
+  btnBack.addEventListener('click', function () { if (current > 0) show(current - 1); });
+
+  /* ---------- submit ---------- */
+  function submit() {
+    var data = {};
+    Array.prototype.forEach.call(form.elements, function (el) {
+      if (!el.name) return;
+      if (el.type === 'radio') { if (el.checked) data[el.name] = el.value; }
+      else if (el.value !== '') data[el.name] = el.value.trim();
+    });
+    data.submittedAt = new Date().toISOString();
+    data.page = location.pathname;
+
+    btnNext.disabled = true;
+    btnNext.innerHTML = 'Sending <i class="fa-solid fa-circle-notch fa-spin"></i>';
+
+    function finish() {
+      form.style.display = 'none';
+      foot.style.display = 'none';
+      document.getElementById('bs-done-email').textContent = data.email || 'the same email address';
+
+      /* Pre-fill the Calendly booking form with what the student just typed,
+         so their slot lines up with the profile above. */
+      Object.keys(CALENDLY).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var qs = [];
+        if (data.fullName) qs.push('name=' + encodeURIComponent(data.fullName));
+        if (data.email) qs.push('email=' + encodeURIComponent(data.email));
+        el.href = CALENDLY[id] + (qs.length ? '?' + qs.join('&') : '');
+      });
+      doneCard.classList.add('is-open');
+      body.scrollTop = 0;
+    }
+
+    if (!FORM_ENDPOINT) { console.log('BragSAT registration (no endpoint set):', data); finish(); return; }
+
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      finish();
+    }).catch(function () {
+      btnNext.disabled = false;
+      btnNext.innerHTML = 'Try again <i class="fa-solid fa-rotate-right"></i>';
+      alert("We couldn't send that. Check your connection and try again, or email us directly.");
+    });
+  }
+
+  /* ---------- open / close ---------- */
+  var lastFocus = null;
+  function open(e) {
+    if (e) e.preventDefault();
+    lastFocus = document.activeElement;
+    var mob = document.getElementById('mobile-menu');
+    if (mob) mob.classList.add('hidden');
+    overlay.classList.add('is-open');
+    document.body.classList.add('bs-locked');
+    setTimeout(function () { document.getElementById('bs-name').focus(); }, 60);
+  }
+  function close() {
+    overlay.classList.remove('is-open');
+    document.body.classList.remove('bs-locked');
+    if (lastFocus) lastFocus.focus();
+  }
+  window.openBragSATForm = open;
+
+  document.getElementById('bs-close').addEventListener('click', close);
+  document.getElementById('bs-done-close').addEventListener('click', close);
+  overlay.addEventListener('mousedown', function (e) { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) close();
+  });
+
+  /* Any link pointing at #consultation-form, plus anything marked
+     data-open-form, opens the modal instead of jumping. */
+  Array.prototype.forEach.call(
+    document.querySelectorAll('a[href="#consultation-form"], [data-open-form]'),
+    function (el) { el.addEventListener('click', open); }
+  );
+
+  show(0);
+})();
+</script>
+
+</body>
+</html>
