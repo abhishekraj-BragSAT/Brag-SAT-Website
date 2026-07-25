@@ -603,11 +603,11 @@
               <label for="bs-target-month">When do you want to sit the SAT? <span class="bs-req">*</span></label>
               <select id="bs-target-month" name="targetMonth">
                 <option value="">Select month</option>
-                <option>January</option><option>February</option><option>March</option>
+                <option>March</option>
                 <option>April</option><option>May</option><option>June</option>
                 <option>July</option><option>August</option><option>September</option>
                 <option>October</option><option>November</option><option>December</option>
-                <option>Not decided yet</option>
+                <option selected>Not decided yet</option>
               </select>
               <p class="bs-error">Select a month.</p>
             </div>
@@ -747,7 +747,7 @@
      --------------------------------------------------------- */
 
   // 1. Your Apps Script web-app URL (ends in /exec). See setup guide.
-  var FORM_ENDPOINT = "https://script.google.com/a/macros/bragsat.com/s/AKfycbzr5_lH2LOWH4QekbLCDIbJ1zHkR6TCFd79W-gMTGRJu7jelXFonRYEcQ7F5aXIQv8T/exec";
+  var FORM_ENDPOINT = "https://formspree.io/f/xnjeobyn";
 
   // 2 & 3. Founder Calendly links shown on the success screen.
   var CALENDLY = {
@@ -936,11 +936,12 @@
 
     if (!FORM_ENDPOINT) { console.log('BragSAT registration (no endpoint set):', data); finish(); return; }
 
-    /* text/plain keeps this a "simple" request, so the browser skips the
-       CORS preflight that Apps Script web apps cannot answer. */
     fetch(FORM_ENDPOINT, {
       method: 'POST',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
       body: JSON.stringify(data)
     }).then(function (r) {
       if (!r.ok) throw new Error(r.status);
