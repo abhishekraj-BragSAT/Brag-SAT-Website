@@ -1443,5 +1443,16 @@
 })();
 </script>
 
+<!-- Auto-open the registration form shortly after the page loads -->
+<script>
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      if (typeof window.openBragSATForm === 'function') {
+        window.openBragSATForm();
+      }
+    }, 600);
+  });
+</script>
+
 </body>
 </html>
