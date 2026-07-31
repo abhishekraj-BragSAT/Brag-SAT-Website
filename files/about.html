@@ -266,6 +266,7 @@
         backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
         display:none; align-items:flex-start; justify-content:center;
         padding:24px 16px; overflow-y:auto;
+        overscroll-behavior:contain;
     }
     #bs-form-overlay.is-open{display:flex;}
     .bs-panel{
@@ -275,6 +276,8 @@
         font-family:'Inter',sans-serif; color:#171717;
         animation:bs-rise .28s cubic-bezier(.2,.8,.3,1) both;
         margin:auto;
+        display:flex; flex-direction:column;
+        max-height:90vh; max-height:90dvh;
     }
     @keyframes bs-rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
     @media (prefers-reduced-motion:reduce){.bs-panel{animation:none}}
@@ -282,6 +285,7 @@
     .bs-head{
         padding:26px 28px 0; position:relative;
         border-bottom:1px solid var(--bs-line);
+        flex:0 0 auto;
     }
     .bs-eyebrow{
         font-size:11px; letter-spacing:.18em; text-transform:uppercase;
@@ -316,7 +320,11 @@
     }
     .bs-step.is-done span{color:var(--bs-gold-dark);}
 
-    .bs-body{padding:28px; max-height:min(62vh,620px); overflow-y:auto;}
+    .bs-body{
+        padding:28px; overflow-y:auto; overscroll-behavior:contain;
+        -webkit-overflow-scrolling:touch;
+        flex:1 1 auto; min-height:0;
+    }
     .bs-fieldset{display:none;}
     .bs-fieldset.is-active{display:block;}
     .bs-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
@@ -385,6 +393,7 @@
     .bs-foot{
         padding:18px 28px; border-top:1px solid var(--bs-line); background:#fafafa;
         display:flex; align-items:center; justify-content:space-between; gap:14px;
+        flex:0 0 auto;
     }
     .bs-btn{
         font-family:inherit; font-size:12px; font-weight:800; letter-spacing:.12em;
@@ -401,7 +410,7 @@
     .bs-progress-label{font-size:11px; color:var(--bs-muted); font-weight:600; letter-spacing:.08em; text-transform:uppercase;}
 
     .bs-done{padding:56px 32px; text-align:center; display:none;}
-    .bs-done.is-open{display:block;}
+    .bs-done.is-open{display:block; overflow-y:auto; flex:1 1 auto; min-height:0;}
     .bs-done i{
         font-size:30px; color:var(--bs-gold); width:70px; height:70px; border-radius:20px;
         border:1px solid var(--bs-line); background:#fafafa;
