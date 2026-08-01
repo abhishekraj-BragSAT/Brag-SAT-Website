@@ -726,7 +726,7 @@
         animation:bs-rise .28s cubic-bezier(.2,.8,.3,1) both;
         margin:auto;
         display:flex; flex-direction:column;
-        max-height:90vh; max-height:90dvh;
+        max-height:90vh; max-height:90svh;
     }
     @keyframes bs-rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
     @media (prefers-reduced-motion:reduce){.bs-panel{animation:none}}
@@ -1222,6 +1222,7 @@
 
   var overlay = document.getElementById('bs-form-overlay');
   if (!overlay) return;
+  var panel    = overlay.querySelector('.bs-panel');
   var form     = document.getElementById('bs-form');
   var body     = document.getElementById('bs-body');
   var foot     = document.getElementById('bs-foot');
@@ -1420,6 +1421,17 @@
 
   /* ---------- open / close ---------- */
   var lastFocus = null;
+
+  /* Pixel-accurate safety net for browsers that don't support svh/dvh:
+     compute the real visible height (using visualViewport when available,
+     since that tracks mobile toolbars more reliably than innerHeight) and
+     cap the panel there, guaranteeing the footer is always reachable. */
+  function fitPanel() {
+    if (!panel) return;
+    var vh = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
+    panel.style.maxHeight = Math.round(vh * 0.9) + 'px';
+  }
+
   function open(e) {
     if (e) e.preventDefault();
     lastFocus = document.activeElement;
@@ -1427,6 +1439,7 @@
     if (mob) mob.classList.add('hidden');
     overlay.classList.add('is-open');
     document.body.classList.add('bs-locked');
+    fitPanel();
     setTimeout(function () { document.getElementById('bs-name').focus(); }, 60);
   }
   function close() {
@@ -1435,6 +1448,14 @@
     if (lastFocus) lastFocus.focus();
   }
   window.openBragSATForm = open;
+  window.addEventListener('resize', function () {
+    if (overlay.classList.contains('is-open')) fitPanel();
+  });
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', function () {
+      if (overlay.classList.contains('is-open')) fitPanel();
+    });
+  }
 
   document.getElementById('bs-close').addEventListener('click', close);
   document.getElementById('bs-done-close').addEventListener('click', close);
