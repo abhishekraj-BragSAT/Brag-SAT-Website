@@ -1274,6 +1274,7 @@
           i.closest('.bs-field').classList.remove('has-error');
         });
       }
+      if (typeof fitPanel === 'function') fitPanel();
     });
   });
 
@@ -1432,6 +1433,8 @@
      particular flex quirks. Recomputed on open, resize, and step change. */
   var headEl = overlay.querySelector('.bs-head');
   var footEl = document.getElementById('bs-foot');
+  var doneEl = document.getElementById('bs-done');
+  var formEl = document.getElementById('bs-form');
   function fitPanel() {
     if (!panel) return;
     var vh = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
@@ -1443,6 +1446,15 @@
     var bodyMax = available - headH - footH;
     if (bodyMax < 100) bodyMax = 100;
     if (body) body.style.maxHeight = bodyMax + 'px';
+
+    /* Some browsers still size the panel to its max-height even though
+       content is shorter. Force the real, measured height explicitly so
+       there's nothing left to guess at. */
+    var doneVisible = doneEl && doneEl.offsetParent !== null;
+    var contentH = doneVisible
+      ? headH + (doneEl ? doneEl.offsetHeight : 0)
+      : headH + (formEl ? formEl.offsetHeight : 0);
+    panel.style.height = Math.min(contentH, available) + 'px';
   }
 
   function open(e) {
