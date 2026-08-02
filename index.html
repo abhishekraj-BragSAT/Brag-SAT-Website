@@ -721,24 +721,29 @@
     .bs-panel{
         background:#fff; width:100%; max-width:760px; border-radius:24px;
         box-shadow:0 30px 80px rgba(10,10,10,.35);
-        border:1px solid var(--bs-line); overflow:hidden;
-        display:flex; flex-direction:column;
+        border:1px solid var(--bs-line);
         font-family:'Inter',sans-serif; color:#171717;
         animation:bs-rise .28s cubic-bezier(.2,.8,.3,1) both;
         margin:auto;
         max-height:90vh; max-height:90svh;
+        overflow-y:auto; overscroll-behavior:contain;
+        -webkit-overflow-scrolling:touch;
     }
     @keyframes bs-rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
     @media (prefers-reduced-motion:reduce){.bs-panel{animation:none}}
 
     #bs-form{
-        display:flex; flex-direction:column;
-        flex:1 1 auto; min-height:0; overflow:hidden;
+        display:block;
+    }
+    .bs-close-bar{
+        position:sticky; top:0; z-index:5;
+        display:flex; justify-content:flex-end;
+        padding:16px 16px 0; background:#fff;
     }
     .bs-head{
-        padding:26px 28px 0; position:relative;
+        padding:0 28px; position:relative;
         border-bottom:1px solid var(--bs-line);
-        flex:0 0 auto;
+        padding-bottom:22px; margin-top:-8px;
     }
     .bs-eyebrow{
         font-size:11px; letter-spacing:.18em; text-transform:uppercase;
@@ -748,38 +753,18 @@
         font-family:'Sora',sans-serif; font-weight:600; letter-spacing:-.02em;
         font-size:26px; color:var(--bs-ink); margin:6px 0 4px;
     }
-    .bs-sub{font-size:14px; color:var(--bs-muted); margin:0 0 18px; max-width:52ch;}
+    .bs-sub{font-size:14px; color:var(--bs-muted); margin:0; max-width:52ch;}
     .bs-close{
-        position:absolute; top:20px; right:20px;
         width:40px; height:40px; border-radius:12px; border:1px solid var(--bs-line);
         background:#fafafa; color:#404040; font-size:16px; cursor:pointer;
         display:flex; align-items:center; justify-content:center; transition:.2s;
     }
     .bs-close:hover{background:var(--bs-ink); color:#fff; border-color:var(--bs-ink);}
 
-    .bs-steps{display:flex; gap:4px; padding:0 0 0;}
-    .bs-step{flex:1; padding-bottom:14px; text-align:center; position:relative;}
-    .bs-step span{
-        font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
-        color:#a3a3a3; transition:.25s;
-    }
-    .bs-step::after{
-        content:''; position:absolute; left:0; right:0; bottom:0; height:3px;
-        background:var(--bs-line); border-radius:3px; transition:.3s;
-    }
-    .bs-step.is-active span{color:var(--bs-ink);}
-    .bs-step.is-active::after,.bs-step.is-done::after{
-        background:linear-gradient(135deg,var(--bs-gold-light) 0%,var(--bs-gold) 50%,var(--bs-gold-dark) 100%);
-    }
-    .bs-step.is-done span{color:var(--bs-gold-dark);}
-
     .bs-body{
-        padding:28px; overflow-y:auto; overscroll-behavior:contain;
-        -webkit-overflow-scrolling:touch;
-        flex:1 1 auto; min-height:0;
+        padding:28px;
     }
-    .bs-fieldset{display:none;}
-    .bs-fieldset.is-active{display:block;}
+    .bs-section{margin-bottom:32px;}
     .bs-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
     .bs-grid .bs-full{grid-column:1/-1;}
     @media (max-width:620px){.bs-grid{grid-template-columns:1fr;} .bs-body{padding:20px;} .bs-title{font-size:22px;}}
@@ -843,15 +828,11 @@
     }
     .bs-divider{height:1px; background:var(--bs-line); margin:24px 0;}
 
-    .bs-foot{
-        padding:18px 28px; border-top:1px solid var(--bs-line); background:#fafafa;
-        display:flex; align-items:center; justify-content:space-between; gap:14px;
-        flex:0 0 auto;
-    }
     .bs-btn{
         font-family:inherit; font-size:12px; font-weight:800; letter-spacing:.12em;
         text-transform:uppercase; padding:15px 26px; border-radius:12px; cursor:pointer;
         transition:.2s; border:1px solid transparent; display:inline-flex; align-items:center; gap:9px;
+        justify-content:center; width:100%;
     }
     .bs-btn-primary{background:var(--bs-ink); color:#fff; border-color:var(--bs-ink); box-shadow:0 4px 14px rgba(10,10,10,.18);}
     .bs-btn-primary:hover{transform:translateY(-1px); background:#171717;}
@@ -860,10 +841,9 @@
     .bs-btn-ghost{background:transparent; color:#525252; border-color:#d4d4d4;}
     .bs-btn-ghost:hover{background:#fff; color:var(--bs-ink); border-color:var(--bs-ink);}
     .bs-btn-ghost[hidden]{display:none;}
-    .bs-progress-label{font-size:11px; color:var(--bs-muted); font-weight:600; letter-spacing:.08em; text-transform:uppercase;}
 
     .bs-done{padding:56px 32px; text-align:center; display:none;}
-    .bs-done.is-open{display:block; overflow-y:auto; flex:1 1 auto; min-height:0;}
+    .bs-done.is-open{display:block;}
     .bs-done i{
         font-size:30px; color:var(--bs-gold); width:70px; height:70px; border-radius:20px;
         border:1px solid var(--bs-line); background:#fafafa;
@@ -912,24 +892,20 @@
 <div id="bs-form-overlay" role="dialog" aria-modal="true" aria-labelledby="bs-form-title">
   <div class="bs-panel">
 
-    <div class="bs-head">
+    <div class="bs-close-bar">
       <button type="button" class="bs-close" id="bs-close" aria-label="Close form"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="bs-head">
       <p class="bs-eyebrow">Student Registration</p>
       <h2 class="bs-title" id="bs-form-title">Tell us about your SAT journey</h2>
-      <p class="bs-sub">Four short sections. Your answers shape the study plan we build for your free consultation call.</p>
-      <div class="bs-steps">
-        <div class="bs-step is-active" data-step="0"><span>Basics</span></div>
-        <div class="bs-step" data-step="1"><span>SAT Profile</span></div>
-        <div class="bs-step" data-step="2"><span>Academics</span></div>
-        <div class="bs-step" data-step="3"><span>Mentorship</span></div>
-      </div>
+      <p class="bs-sub">One quick form. Your answers shape the study plan we build for your free consultation call.</p>
     </div>
 
     <form id="bs-form" novalidate>
       <div class="bs-body" id="bs-body">
 
         <!-- ── STEP 1 ─────────────────────────────── -->
-        <fieldset class="bs-fieldset is-active" data-step="0">
+        <div class="bs-section">
           <h3 class="bs-group-title"><i class="fa-solid fa-user"></i> Basic information</h3>
           <p class="bs-group-note">So we know who we're speaking to and when to call.</p>
           <div class="bs-grid">
@@ -966,10 +942,11 @@
               <p class="bs-error">Enter your city.</p>
             </div>
           </div>
-        </fieldset>
+        </div>
 
         <!-- ── STEP 2 ─────────────────────────────── -->
-        <fieldset class="bs-fieldset" data-step="1">
+        <div class="bs-divider"></div>
+        <div class="bs-section">
           <h3 class="bs-group-title"><i class="fa-solid fa-chart-line"></i> SAT profile</h3>
           <p class="bs-group-note">Scores tell us where the points are hiding. Estimates are fine.</p>
 
@@ -1108,10 +1085,11 @@
               <p class="bs-error">Select an option.</p>
             </div>
           </div>
-        </fieldset>
+        </div>
 
         <!-- ── STEP 3 ─────────────────────────────── -->
-        <fieldset class="bs-fieldset" data-step="2">
+        <div class="bs-divider"></div>
+        <div class="bs-section">
           <h3 class="bs-group-title"><i class="fa-solid fa-graduation-cap"></i> Academic profile</h3>
           <p class="bs-group-note">Your board and grade decide how much runway we have.</p>
           <div class="bs-grid">
@@ -1146,10 +1124,11 @@
               <p class="bs-error">Select your curriculum.</p>
             </div>
           </div>
-        </fieldset>
+        </div>
 
         <!-- ── STEP 4 ─────────────────────────────── -->
-        <fieldset class="bs-fieldset" data-step="3">
+        <div class="bs-divider"></div>
+        <div class="bs-section">
           <h3 class="bs-group-title"><i class="fa-solid fa-compass-drafting"></i> Mentorship requirements</h3>
           <p class="bs-group-note">The more specific you are here, the sharper your consultation call will be.</p>
           <div class="bs-grid">
@@ -1175,13 +1154,9 @@
               <p class="bs-count"><span id="bs-notes-count">0</span> / 5000</p>
             </div>
           </div>
-        </fieldset>
-      </div>
+        </div>
 
-      <div class="bs-foot" id="bs-foot">
-        <button type="button" class="bs-btn bs-btn-ghost" id="bs-back" hidden><i class="fa-solid fa-arrow-left"></i> Back</button>
-        <span class="bs-progress-label" id="bs-progress">Step 1 of 4</span>
-        <button type="button" class="bs-btn bs-btn-primary" id="bs-next">Continue <i class="fa-solid fa-arrow-right"></i></button>
+        <button type="button" class="bs-btn bs-btn-primary" id="bs-submit" style="margin-top:8px;">Submit registration <i class="fa-solid fa-paper-plane"></i></button>
       </div>
     </form>
 
@@ -1226,17 +1201,10 @@
 
   var overlay = document.getElementById('bs-form-overlay');
   if (!overlay) return;
-  var panel    = overlay.querySelector('.bs-panel');
   var form     = document.getElementById('bs-form');
   var body     = document.getElementById('bs-body');
-  var foot     = document.getElementById('bs-foot');
   var doneCard = document.getElementById('bs-done');
-  var btnNext  = document.getElementById('bs-next');
-  var btnBack  = document.getElementById('bs-back');
-  var progress = document.getElementById('bs-progress');
-  var steps    = Array.prototype.slice.call(overlay.querySelectorAll('.bs-step'));
-  var sets     = Array.prototype.slice.call(overlay.querySelectorAll('.bs-fieldset'));
-  var current  = 0;
+  var btnSubmit = document.getElementById('bs-submit');
 
   /* ---------- populate dropdowns ---------- */
   var COUNTRIES = ["India","United States","United Arab Emirates","United Kingdom","Canada","Australia","Singapore","Saudi Arabia","Qatar","Kuwait","Oman","Bahrain","Nepal","Sri Lanka","Bangladesh","Pakistan","Malaysia","Indonesia","Thailand","Vietnam","Philippines","China","Hong Kong","Japan","South Korea","Germany","France","Netherlands","Switzerland","Spain","Italy","Ireland","Sweden","Norway","Denmark","Poland","Turkey","Russia","South Africa","Nigeria","Kenya","Ghana","Egypt","Ethiopia","Tanzania","Uganda","Zambia","Zimbabwe","Mauritius","New Zealand","Brazil","Mexico","Argentina","Chile","Colombia","Other"];
@@ -1277,7 +1245,6 @@
           i.closest('.bs-field').classList.remove('has-error');
         });
       }
-      if (typeof fitPanel === 'function') fitPanel();
     });
   });
 
@@ -1293,85 +1260,62 @@
   }
   function required(el) { return fail(el, el.value.trim() === ''); }
 
-  function validateStep(i) {
+  function validateAll() {
     var ok = true;
-    if (i === 0) {
-      var name = document.getElementById('bs-name');
-      ok &= fail(name, !/^[A-Za-z\u00C0-\u024F' .-]{2,}$/.test(name.value.trim()));
-      var phone = document.getElementById('bs-phone');
-      ok &= fail(phone, !/^\d{6,15}$/.test(phone.value.replace(/[\s-]/g, '')));
-      var mail = document.getElementById('bs-email');
-      ok &= fail(mail, !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail.value.trim()));
-      ok &= required(selCountry);
-      ok &= required(document.getElementById('bs-city'));
+    var name = document.getElementById('bs-name');
+    ok &= fail(name, !/^[A-Za-z\u00C0-\u024F' .-]{2,}$/.test(name.value.trim()));
+    var phone = document.getElementById('bs-phone');
+    ok &= fail(phone, !/^\d{6,15}$/.test(phone.value.replace(/[\s-]/g, '')));
+    var mail = document.getElementById('bs-email');
+    ok &= fail(mail, !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail.value.trim()));
+    ok &= required(selCountry);
+    ok &= required(document.getElementById('bs-city'));
+
+    var mock = form.querySelector('input[name="writtenMock"]:checked');
+    ok &= fail(document.getElementById('bs-mock-yes'), !mock);
+    if (mock && mock.value === 'Yes') {
+      ok &= num(document.getElementById('bs-mock-total'), 400, 1600);
+      ok &= num(document.getElementById('bs-mock-math'), 200, 800);
+      ok &= num(document.getElementById('bs-mock-rw'), 200, 800);
+      ok &= num(document.getElementById('bs-mock-months'), 0, 120);
     }
-    if (i === 1) {
-      var mock = form.querySelector('input[name="writtenMock"]:checked');
-      ok &= fail(document.getElementById('bs-mock-yes'), !mock);
-      if (mock && mock.value === 'Yes') {
-        ok &= num(document.getElementById('bs-mock-total'), 400, 1600);
-        ok &= num(document.getElementById('bs-mock-math'), 200, 800);
-        ok &= num(document.getElementById('bs-mock-rw'), 200, 800);
-        ok &= num(document.getElementById('bs-mock-months'), 0, 120);
-      }
-      var real = form.querySelector('input[name="writtenReal"]:checked');
-      ok &= fail(document.getElementById('bs-real-yes'), !real);
-      if (real && real.value === 'Yes') {
-        ok &= num(document.getElementById('bs-real-total'), 400, 1600);
-        ok &= num(document.getElementById('bs-real-math'), 200, 800);
-        ok &= num(document.getElementById('bs-real-rw'), 200, 800);
-        ok &= num(document.getElementById('bs-real-months'), 0, 120);
-        ok &= num(document.getElementById('bs-best-total'), 400, 1600);
-        ok &= num(document.getElementById('bs-best-math'), 200, 800);
-        ok &= num(document.getElementById('bs-best-rw'), 200, 800);
-      }
-      ok &= required(document.getElementById('bs-target-month'));
-      ok &= required(document.getElementById('bs-target-year'));
-      var reg = form.querySelector('input[name="registered"]:checked');
-      ok &= fail(document.getElementById('bs-reg-yes'), !reg);
-      ok &= required(document.getElementById('bs-prep'));
+    var real = form.querySelector('input[name="writtenReal"]:checked');
+    ok &= fail(document.getElementById('bs-real-yes'), !real);
+    if (real && real.value === 'Yes') {
+      ok &= num(document.getElementById('bs-real-total'), 400, 1600);
+      ok &= num(document.getElementById('bs-real-math'), 200, 800);
+      ok &= num(document.getElementById('bs-real-rw'), 200, 800);
+      ok &= num(document.getElementById('bs-real-months'), 0, 120);
+      ok &= num(document.getElementById('bs-best-total'), 400, 1600);
+      ok &= num(document.getElementById('bs-best-math'), 200, 800);
+      ok &= num(document.getElementById('bs-best-rw'), 200, 800);
     }
-    if (i === 2) {
-      ok &= required(document.getElementById('bs-grade'));
-      ok &= required(document.getElementById('bs-gradyear'));
-      ok &= required(document.getElementById('bs-school'));
-      ok &= required(document.getElementById('bs-curriculum'));
-    }
-    if (i === 3) {
-      ok &= required(document.getElementById('bs-program'));
-      var ch = document.getElementById('bs-challenges');
-      ok &= fail(ch, ch.value.trim().length < 10);
-    }
+    ok &= required(document.getElementById('bs-target-month'));
+    ok &= required(document.getElementById('bs-target-year'));
+    var reg = form.querySelector('input[name="registered"]:checked');
+    ok &= fail(document.getElementById('bs-reg-yes'), !reg);
+    ok &= required(document.getElementById('bs-prep'));
+
+    ok &= required(document.getElementById('bs-grade'));
+    ok &= required(document.getElementById('bs-gradyear'));
+    ok &= required(document.getElementById('bs-school'));
+    ok &= required(document.getElementById('bs-curriculum'));
+
+    ok &= required(document.getElementById('bs-program'));
+    var ch = document.getElementById('bs-challenges');
+    ok &= fail(ch, ch.value.trim().length < 10);
+
     if (!ok) {
-      var first = sets[i].querySelector('.has-error');
+      var first = form.querySelector('.has-error');
       if (first && first.scrollIntoView) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
     return !!ok;
   }
 
-  /* ---------- step navigation ---------- */
-  function show(i) {
-    current = i;
-    sets.forEach(function (s, n) { s.classList.toggle('is-active', n === i); });
-    steps.forEach(function (s, n) {
-      s.classList.toggle('is-active', n === i);
-      s.classList.toggle('is-done', n < i);
-    });
-    btnBack.hidden = i === 0;
-    btnNext.innerHTML = (i === sets.length - 1)
-      ? 'Submit registration <i class="fa-solid fa-paper-plane"></i>'
-      : 'Continue <i class="fa-solid fa-arrow-right"></i>';
-    progress.textContent = 'Step ' + (i + 1) + ' of ' + sets.length;
-    body.scrollTop = 0;
-    if (typeof fitPanel === 'function') fitPanel();
-  }
-
-  btnNext.addEventListener('click', function () {
-    if (!validateStep(current)) return;
-    if (current < sets.length - 1) { show(current + 1); return; }
+  btnSubmit.addEventListener('click', function () {
+    if (!validateAll()) return;
     submit();
   });
-  btnBack.addEventListener('click', function () { if (current > 0) show(current - 1); });
 
   /* ---------- submit ---------- */
   function submit() {
@@ -1384,12 +1328,11 @@
     data.submittedAt = new Date().toISOString();
     data.page = location.pathname;
 
-    btnNext.disabled = true;
-    btnNext.innerHTML = 'Sending <i class="fa-solid fa-circle-notch fa-spin"></i>';
+    btnSubmit.disabled = true;
+    btnSubmit.innerHTML = 'Sending <i class="fa-solid fa-circle-notch fa-spin"></i>';
 
     function finish() {
       form.style.display = 'none';
-      foot.style.display = 'none';
       document.getElementById('bs-done-email').textContent = data.email || 'the same email address';
 
       /* Pre-fill the Calendly booking form with what the student just typed,
@@ -1419,38 +1362,14 @@
       if (!r.ok) throw new Error(r.status);
       finish();
     }).catch(function () {
-      btnNext.disabled = false;
-      btnNext.innerHTML = 'Try again <i class="fa-solid fa-rotate-right"></i>';
+      btnSubmit.disabled = false;
+      btnSubmit.innerHTML = 'Try again <i class="fa-solid fa-rotate-right"></i>';
       alert("We couldn't send that. Check your connection and try again, or email us directly.");
     });
   }
 
   /* ---------- open / close ---------- */
   var lastFocus = null;
-
-  /* Deterministic sizing: measure the real visible height, cap the panel
-     there, then measure the actual rendered height of the head and
-     whichever footer is currently showing (form footer or done-screen has
-     none), and give the body exactly what's left. This never depends on
-     flexbox space-distribution, so it can't be thrown off by any browser's
-     particular flex quirks. Recomputed on open, resize, and step change. */
-  var headEl = overlay.querySelector('.bs-head');
-  var footEl = document.getElementById('bs-foot');
-  var doneEl = document.getElementById('bs-done');
-  var formEl = document.getElementById('bs-form');
-  function fitPanel() {
-    if (!panel) return;
-    var vh = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
-    var available = Math.round(vh * 0.9);
-    panel.style.maxHeight = available + 'px';
-    var headH = headEl ? headEl.offsetHeight : 0;
-    var footVisible = footEl && footEl.offsetParent !== null;
-    var footH = footVisible ? footEl.offsetHeight : 0;
-    var bodyMax = available - headH - footH;
-    if (bodyMax < 100) bodyMax = 100;
-    if (body) body.style.maxHeight = bodyMax + 'px';
-
-  }
 
   function open(e) {
     if (e) e.preventDefault();
@@ -1459,7 +1378,6 @@
     if (mob) mob.classList.add('hidden');
     overlay.classList.add('is-open');
     document.body.classList.add('bs-locked');
-    fitPanel();
     setTimeout(function () { document.getElementById('bs-name').focus(); }, 60);
   }
   function close() {
@@ -1468,14 +1386,6 @@
     if (lastFocus) lastFocus.focus();
   }
   window.openBragSATForm = open;
-  window.addEventListener('resize', function () {
-    if (overlay.classList.contains('is-open')) fitPanel();
-  });
-  if (window.visualViewport) {
-    window.visualViewport.addEventListener('resize', function () {
-      if (overlay.classList.contains('is-open')) fitPanel();
-    });
-  }
 
   document.getElementById('bs-close').addEventListener('click', close);
   document.getElementById('bs-done-close').addEventListener('click', close);
@@ -1490,8 +1400,6 @@
     document.querySelectorAll('a[href="#consultation-form"], [data-open-form]'),
     function (el) { el.addEventListener('click', open); }
   );
-
-  show(0);
 })();
 </script>
 
