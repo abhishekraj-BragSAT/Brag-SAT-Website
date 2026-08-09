@@ -882,6 +882,67 @@
         display:inline-flex; align-items:center; gap:7px; margin-top:2px;
     }
     .bs-booking-note{font-size:12px; color:var(--bs-muted); margin:0 auto 4px;}
+    .bs-mentor-guide{
+        background:#fafafa; border:1px solid var(--bs-line); border-radius:12px;
+        padding:18px 20px; max-width:560px; margin:0 auto 4px; text-align:left;
+    }
+    .bs-mentor-guide h4{
+        font-family:'Sora',sans-serif; font-size:14px; font-weight:600; color:var(--bs-ink);
+        margin:0 0 8px;
+    }
+    .bs-mentor-guide p{
+        font-size:13px !important; color:#525252 !important; max-width:none !important;
+        margin:0 0 10px !important; text-align:left;
+    }
+    .bs-mentor-guide ul{
+        list-style:none; margin:0 0 10px; padding:0; display:flex; flex-direction:column; gap:4px;
+    }
+    .bs-mentor-guide li{font-size:13px; color:#404040;}
+    .bs-mentor-guide li strong{color:var(--bs-ink);}
+    .bs-mentor-guide p:last-child{margin-bottom:0 !important;}
+
+    .bs-branch-options{
+        display:grid; grid-template-columns:1fr 1fr; gap:14px;
+        max-width:620px; margin:0 auto 18px; text-align:left;
+    }
+    .bs-branch-card{
+        display:flex; flex-direction:column; align-items:flex-start; gap:8px;
+        border:1px solid var(--bs-line); border-radius:18px; background:#fafafa;
+        padding:22px 20px;
+    }
+    .bs-branch-label{
+        font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
+        color:var(--bs-gold-dark);
+    }
+    .bs-branch-card h4{
+        font-family:'Sora',sans-serif; font-size:17px; font-weight:600; color:var(--bs-ink);
+        margin:0;
+    }
+    .bs-branch-card p{
+        font-size:13px !important; color:#525252 !important; max-width:none !important;
+        text-align:left; margin:0 0 6px !important;
+    }
+    .bs-branch-card .bs-btn{width:100%; justify-content:center; margin-top:auto; font-size:13px; padding:12px 16px;}
+    @media (max-width:620px){.bs-branch-options{grid-template-columns:1fr;}}
+
+    .bs-steps{
+        list-style:none; counter-reset:bs-step; margin:0 auto 22px; padding:0;
+        max-width:520px; text-align:left; display:flex; flex-direction:column; gap:14px;
+    }
+    .bs-steps li{
+        counter-increment:bs-step; position:relative; padding-left:34px; font-size:13px;
+        color:#525252; line-height:1.5;
+    }
+    .bs-steps li::before{
+        content:counter(bs-step); position:absolute; left:0; top:0;
+        width:24px; height:24px; border-radius:50%; background:#fafafa; border:1px solid var(--bs-line);
+        color:var(--bs-gold-dark); font-weight:800; font-size:12px;
+        display:flex; align-items:center; justify-content:center;
+    }
+    .bs-steps li strong{color:var(--bs-ink);}
+    .bs-diagnostic-link{
+        display:inline-flex; align-items:center; gap:8px; text-decoration:none; margin-bottom:18px;
+    }
     @media (max-width:620px){
         .bs-founders{grid-template-columns:1fr;}
         .bs-done{padding:36px 20px;}
@@ -1177,8 +1238,62 @@
           <span class="bs-founder-cta">Book 30 min <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
         </a>
       </div>
-      <p class="bs-booking-note">Either founder works &mdash; both calls cover the same ground.</p>
+      <div class="bs-mentor-guide">
+        <h4>Choosing Your Mentor</h4>
+        <p>If you have a specific area of difficulty, we recommend booking your consultation with the relevant Chief Mentor:</p>
+        <ul>
+          <li><strong>SAT Reading &amp; Writing:</strong> Abhishek Raj, Chief Mentor &ndash; SAT Reading &amp; Writing</li>
+          <li><strong>SAT Math:</strong> Anant Mittal, Chief Mentor &ndash; SAT Math</li>
+        </ul>
+        <p>If you are struggling with both areas equally, or do not have a specific preference, you may book with either mentor. The consultation will be equally suitable.</p>
+      </div>
       <button type="button" class="bs-btn bs-btn-ghost" id="bs-done-close" style="margin-top:26px;">Close</button>
+    </div>
+
+    <div class="bs-done" id="bs-branch">
+      <i class="fa-solid fa-signs-post"></i>
+      <h3>Profile saved. How would you like to proceed?</h3>
+      <p>Choose whichever fits where you are right now.</p>
+
+      <div class="bs-branch-options">
+        <div class="bs-branch-card">
+          <span class="bs-branch-label">Option 1</span>
+          <h4>Book a Free Consultation</h4>
+          <p>Already have a recent SAT score? Book your call directly &mdash; our mentors will review it and map out next steps.</p>
+          <button type="button" class="bs-btn bs-btn-primary" id="bs-branch-book">Book a Free Consultation <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="bs-branch-card">
+          <span class="bs-branch-label">Option 2</span>
+          <h4>Take the Free Diagnostic Test First</h4>
+          <p>No recent score, or it's outdated? Take our free diagnostic first so your consultation is sharper and more specific.</p>
+          <button type="button" class="bs-btn bs-btn-primary" id="bs-branch-diagnostic">Take the Free Diagnostic Test <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <p class="bs-booking-note">Not sure? If your SAT score is missing or outdated, we recommend the diagnostic first.</p>
+      <button type="button" class="bs-btn bs-btn-ghost" id="bs-branch-close" style="margin-top:26px;">Close</button>
+    </div>
+
+    <div class="bs-done" id="bs-diagnostic">
+      <i class="fa-solid fa-file-pen"></i>
+      <h3>Access your free SAT diagnostic test</h3>
+      <p>You're just a few steps away. The test is hosted on our learning platform &mdash; you'll need to create an account and log in before you can access it.</p>
+
+      <ol class="bs-steps">
+        <li><strong>Create your account</strong> &mdash; click the button below to go to the LMS. New users should select &ldquo;Create new account&rdquo; and complete the registration form.</li>
+        <li><strong>Verify your account</strong> &mdash; check your email and follow the instructions, if prompted.</li>
+        <li><strong>Log in</strong> &mdash; use your registered email address and password.</li>
+        <li><strong>Take the Free Diagnostic Test</strong> &mdash; follow the instructions on the LMS to access and complete it.</li>
+        <li><strong>Book your Free Consultation</strong> &mdash; once you're done, you can book your consultation through the LMS.</li>
+      </ol>
+
+      <a class="bs-btn bs-btn-primary bs-diagnostic-link" id="bs-diagnostic-link" href="https://bragsatlearning.moodlecloud.com/course/view.php?id=10" target="_blank" rel="noopener">Sign Up &amp; Access the Free Diagnostic Test <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+      <p class="bs-booking-note">Already have an account? Just log in when prompted and continue to the diagnostic.</p>
+      <div style="display:flex; gap:12px; justify-content:center; margin-top:20px; flex-wrap:wrap;">
+        <button type="button" class="bs-btn bs-btn-ghost" id="bs-diagnostic-back">Back</button>
+        <button type="button" class="bs-btn bs-btn-ghost" id="bs-diagnostic-close">Close</button>
+      </div>
     </div>
 
   </div>
@@ -1204,6 +1319,8 @@
   var form     = document.getElementById('bs-form');
   var body     = document.getElementById('bs-body');
   var doneCard = document.getElementById('bs-done');
+  var branchCard = document.getElementById('bs-branch');
+  var diagCard = document.getElementById('bs-diagnostic');
   var btnSubmit = document.getElementById('bs-submit');
 
   /* ---------- populate dropdowns ---------- */
@@ -1345,7 +1462,7 @@
         if (data.email) qs.push('email=' + encodeURIComponent(data.email));
         el.href = CALENDLY[id] + (qs.length ? '?' + qs.join('&') : '');
       });
-      doneCard.classList.add('is-open');
+      branchCard.classList.add('is-open');
       body.scrollTop = 0;
     }
 
@@ -1376,6 +1493,7 @@
     lastFocus = document.activeElement;
     var mob = document.getElementById('mobile-menu');
     if (mob) mob.classList.add('hidden');
+    if (!overlay.classList.contains('is-open')) resetPanels();
     overlay.classList.add('is-open');
     document.body.classList.add('bs-locked');
     setTimeout(function () { document.getElementById('bs-name').focus(); }, 60);
@@ -1385,10 +1503,37 @@
     document.body.classList.remove('bs-locked');
     if (lastFocus) lastFocus.focus();
   }
+  function resetPanels() {
+    doneCard.classList.remove('is-open');
+    branchCard.classList.remove('is-open');
+    diagCard.classList.remove('is-open');
+    form.style.display = '';
+    btnSubmit.disabled = false;
+    btnSubmit.innerHTML = 'Submit registration <i class="fa-solid fa-paper-plane"></i>';
+  }
   window.openBragSATForm = open;
+
+  /* ---------- branching page navigation ---------- */
+  document.getElementById('bs-branch-book').addEventListener('click', function () {
+    branchCard.classList.remove('is-open');
+    doneCard.classList.add('is-open');
+    body.scrollTop = 0;
+  });
+  document.getElementById('bs-branch-diagnostic').addEventListener('click', function () {
+    branchCard.classList.remove('is-open');
+    diagCard.classList.add('is-open');
+    body.scrollTop = 0;
+  });
+  document.getElementById('bs-diagnostic-back').addEventListener('click', function () {
+    diagCard.classList.remove('is-open');
+    branchCard.classList.add('is-open');
+    body.scrollTop = 0;
+  });
 
   document.getElementById('bs-close').addEventListener('click', close);
   document.getElementById('bs-done-close').addEventListener('click', close);
+  document.getElementById('bs-branch-close').addEventListener('click', close);
+  document.getElementById('bs-diagnostic-close').addEventListener('click', close);
   overlay.addEventListener('mousedown', function (e) { if (e.target === overlay) close(); });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && overlay.classList.contains('is-open')) close();
