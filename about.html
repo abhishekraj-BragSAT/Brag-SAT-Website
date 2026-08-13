@@ -59,10 +59,15 @@
                 <nav class="flex flex-nowrap items-center gap-8 xl:gap-10 font-bold text-neutral-600 text-xl uppercase tracking-wide">
                     <a href="index.html" class="whitespace-nowrap hover:text-gold transition-colors">Home</a>
                     <a href="about.html" class="whitespace-nowrap hover:text-gold transition-colors">About</a>
+                    <a href="events.html" class="whitespace-nowrap hover:text-gold transition-colors">Events</a>
+                    <a href="blog.html" class="whitespace-nowrap hover:text-gold transition-colors">Blog</a>
                 </nav>
 
                 <!-- Dynamic CTA Link Node -->
-                <div class="flex items-center shrink-0">
+                <div class="flex items-center gap-3 shrink-0">
+                    <a href="#consultation-form" data-open-form data-flow="diagnostic" class="bg-white text-neutral-950 border-2 border-gold font-bold px-5 py-3 rounded-xl hover:bg-amber-50 shadow-md transition-all hover:-translate-y-0.5 text-[11px] xl:text-xs tracking-wider uppercase whitespace-nowrap">
+                        Take Free Diagnostic
+                    </a>
                     <a href="#consultation-form" class="bg-neutral-950 text-white border border-neutral-900 font-bold px-5 py-3 rounded-xl hover:bg-neutral-900 shadow-md transition-all hover:-translate-y-0.5 text-[11px] xl:text-xs tracking-wider uppercase whitespace-nowrap">
                         Book Free Call
                     </a>
@@ -70,7 +75,10 @@
             </div>
 
             <!-- CTA for smaller screens where the grouped nav is hidden -->
-            <div class="hidden sm:flex lg:hidden items-center shrink-0 ml-auto">
+            <div class="hidden sm:flex lg:hidden items-center gap-3 shrink-0 ml-auto">
+                <a href="#consultation-form" data-open-form data-flow="diagnostic" class="bg-white text-neutral-950 border-2 border-gold font-bold px-5 py-3 rounded-xl hover:bg-amber-50 shadow-md transition-all hover:-translate-y-0.5 text-[11px] xl:text-xs tracking-wider uppercase whitespace-nowrap">
+                    Take Free Diagnostic
+                </a>
                 <a href="#consultation-form" class="bg-neutral-950 text-white border border-neutral-900 font-bold px-5 py-3 rounded-xl hover:bg-neutral-900 shadow-md transition-all hover:-translate-y-0.5 text-[11px] xl:text-xs tracking-wider uppercase whitespace-nowrap">
                     Book Free Call
                 </a>
@@ -86,7 +94,12 @@
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-neutral-100 px-6 py-6 space-y-4 shadow-inner">
             <a href="index.html" class="block font-bold text-2xl text-neutral-700 hover:text-gold py-1">Home</a>
             <a href="about.html" class="block font-bold text-2xl text-neutral-700 hover:text-gold py-1">About</a>
-            <a href="#consultation-form" class="w-full text-center flex items-center justify-center bg-neutral-950 text-white font-black py-4 rounded-xl text-sm tracking-wider uppercase pt-3">
+            <a href="events.html" class="block font-bold text-2xl text-neutral-700 hover:text-gold py-1">Events</a>
+            <a href="blog.html" class="block font-bold text-2xl text-neutral-700 hover:text-gold py-1">Blog</a>
+            <a href="#consultation-form" data-open-form data-flow="diagnostic" class="w-full text-center flex items-center justify-center bg-white text-neutral-950 border-2 border-gold font-black py-4 rounded-xl text-sm tracking-wider uppercase">
+                Take Free Diagnostic
+            </a>
+            <a href="#consultation-form" class="w-full text-center flex items-center justify-center bg-neutral-950 text-white font-black py-4 rounded-xl text-sm tracking-wider uppercase">
                 Book Free Consultation
             </a>
         </div>
@@ -189,6 +202,22 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <section class="py-24 bg-stone-50 w-full border-t border-neutral-100">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
+            <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-gold text-2xl mx-auto border border-neutral-200 shadow-sm">
+                <i class="fa-solid fa-file-pen"></i>
+            </div>
+            <h2 class="heading-font text-4xl sm:text-5xl font-semibold text-neutral-950 tracking-tight">Take a Free Diagnostic SAT</h2>
+            <p class="text-base sm:text-lg text-neutral-500 max-w-xl mx-auto">Familiarise yourself with the SAT and identify your current abilities &mdash; strengths and weaknesses &mdash; by taking our Free Diagnostic SAT.</p>
+
+            <div class="pt-8 max-w-md mx-auto space-y-4">
+                <a href="#consultation-form" data-open-form data-flow="diagnostic" class="flex items-center justify-center gap-3 bg-gold-gradient text-neutral-950 font-black py-5 rounded-xl shadow-md transition-all hover:-translate-y-0.5 tracking-widest uppercase text-sm w-full border border-amber-400/20">
+                    <i class="fa-solid fa-file-pen"></i> Take Free Diagnostic
+                </a>
+            </div>
         </div>
     </section>
 
@@ -1013,7 +1042,11 @@
         if (data.email) qs.push('email=' + encodeURIComponent(data.email));
         el.href = CALENDLY[id] + (qs.length ? '?' + qs.join('&') : '');
       });
-      branchCard.classList.add('is-open');
+      if (flowMode === 'diagnostic') {
+        diagCard.classList.add('is-open');
+      } else {
+        branchCard.classList.add('is-open');
+      }
       body.scrollTop = 0;
     }
 
@@ -1038,9 +1071,12 @@
 
   /* ---------- open / close ---------- */
   var lastFocus = null;
+  var flowMode = 'default';
 
   function open(e) {
     if (e) e.preventDefault();
+    var trigger = e && e.currentTarget;
+    flowMode = (trigger && trigger.getAttribute && trigger.getAttribute('data-flow') === 'diagnostic') ? 'diagnostic' : 'default';
     lastFocus = document.activeElement;
     var mob = document.getElementById('mobile-menu');
     if (mob) mob.classList.add('hidden');

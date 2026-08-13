@@ -59,10 +59,15 @@
                 <nav class="flex flex-nowrap items-center gap-8 xl:gap-10 font-bold text-neutral-600 text-xl uppercase tracking-wide">
                     <a href="#top" class="whitespace-nowrap hover:text-gold transition-colors">Home</a>
                     <a href="about.html" class="whitespace-nowrap hover:text-gold transition-colors">About</a>
+                    <a href="events.html" class="whitespace-nowrap hover:text-gold transition-colors">Events</a>
+                    <a href="blog.html" class="whitespace-nowrap hover:text-gold transition-colors">Blog</a>
                 </nav>
 
                 <!-- Dynamic CTA Link Node -->
-                <div class="flex items-center shrink-0">
+                <div class="flex items-center gap-3 shrink-0">
+                    <a href="#consultation-form" data-open-form data-flow="diagnostic" class="bg-white text-neutral-950 border-2 border-gold font-bold px-5 py-3 rounded-xl hover:bg-amber-50 shadow-md transition-all hover:-translate-y-0.5 text-[11px] xl:text-xs tracking-wider uppercase whitespace-nowrap">
+                        Take Free Diagnostic
+                    </a>
                     <a href="#consultation-form" class="bg-neutral-950 text-white border border-neutral-900 font-bold px-5 py-3 rounded-xl hover:bg-neutral-900 shadow-md transition-all hover:-translate-y-0.5 text-[11px] xl:text-xs tracking-wider uppercase whitespace-nowrap">
                         Book Free Call
                     </a>
@@ -70,7 +75,10 @@
             </div>
 
             <!-- CTA for smaller screens where the grouped nav is hidden -->
-            <div class="hidden sm:flex lg:hidden items-center shrink-0 ml-auto">
+            <div class="hidden sm:flex lg:hidden items-center gap-3 shrink-0 ml-auto">
+                <a href="#consultation-form" data-open-form data-flow="diagnostic" class="bg-white text-neutral-950 border-2 border-gold font-bold px-5 py-3 rounded-xl hover:bg-amber-50 shadow-md transition-all hover:-translate-y-0.5 text-[11px] xl:text-xs tracking-wider uppercase whitespace-nowrap">
+                    Take Free Diagnostic
+                </a>
                 <a href="#consultation-form" class="bg-neutral-950 text-white border border-neutral-900 font-bold px-5 py-3 rounded-xl hover:bg-neutral-900 shadow-md transition-all hover:-translate-y-0.5 text-[11px] xl:text-xs tracking-wider uppercase whitespace-nowrap">
                     Book Free Call
                 </a>
@@ -86,7 +94,12 @@
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-neutral-100 px-6 py-6 space-y-4 shadow-inner">
             <a href="#top" class="block font-bold text-2xl text-neutral-700 hover:text-gold py-1">Home</a>
             <a href="about.html" class="block font-bold text-2xl text-neutral-700 hover:text-gold py-1">About</a>
-            <a href="#consultation-form" class="w-full text-center flex items-center justify-center bg-neutral-950 text-white font-black py-4 rounded-xl text-sm tracking-wider uppercase pt-3">
+            <a href="events.html" class="block font-bold text-2xl text-neutral-700 hover:text-gold py-1">Events</a>
+            <a href="blog.html" class="block font-bold text-2xl text-neutral-700 hover:text-gold py-1">Blog</a>
+            <a href="#consultation-form" data-open-form data-flow="diagnostic" class="w-full text-center flex items-center justify-center bg-white text-neutral-950 border-2 border-gold font-black py-4 rounded-xl text-sm tracking-wider uppercase">
+                Take Free Diagnostic
+            </a>
+            <a href="#consultation-form" class="w-full text-center flex items-center justify-center bg-neutral-950 text-white font-black py-4 rounded-xl text-sm tracking-wider uppercase">
                 Book Free Consultation
             </a>
         </div>
@@ -657,7 +670,10 @@
                 </div>
             </div>
 
-            <div class="lg:col-span-12 flex justify-center pt-6">
+            <div class="lg:col-span-12 flex flex-col items-center gap-4 pt-6">
+                <a href="#consultation-form" data-open-form data-flow="diagnostic" class="inline-flex items-center gap-4 bg-gold-gradient text-neutral-950 font-black px-16 py-7 rounded-2xl transition-all shadow-xl shadow-amber-500/20 text-center tracking-wider text-[18px] sm:text-[20px] uppercase border border-amber-400/20 hover:-translate-y-0.5">
+                    <i class="fa-solid fa-file-pen text-[20px] sm:text-[24px]"></i> Take a Free Diagnostic SAT
+                </a>
                 <a href="#consultation-form" class="inline-flex items-center gap-4 bg-gold-gradient text-neutral-950 font-black px-16 py-7 rounded-2xl transition-all shadow-xl shadow-amber-500/20 text-center tracking-wider text-[18px] sm:text-[20px] uppercase border border-amber-400/20 hover:-translate-y-0.5">
                     <i class="fa-solid fa-calendar-check text-[20px] sm:text-[24px]"></i> Schedule a Free Consultation Call
                 </a>
@@ -1462,7 +1478,11 @@
         if (data.email) qs.push('email=' + encodeURIComponent(data.email));
         el.href = CALENDLY[id] + (qs.length ? '?' + qs.join('&') : '');
       });
-      branchCard.classList.add('is-open');
+      if (flowMode === 'diagnostic') {
+        diagCard.classList.add('is-open');
+      } else {
+        branchCard.classList.add('is-open');
+      }
       body.scrollTop = 0;
     }
 
@@ -1487,9 +1507,12 @@
 
   /* ---------- open / close ---------- */
   var lastFocus = null;
+  var flowMode = 'default';
 
   function open(e) {
     if (e) e.preventDefault();
+    var trigger = e && e.currentTarget;
+    flowMode = (trigger && trigger.getAttribute && trigger.getAttribute('data-flow') === 'diagnostic') ? 'diagnostic' : 'default';
     lastFocus = document.activeElement;
     var mob = document.getElementById('mobile-menu');
     if (mob) mob.classList.add('hidden');
